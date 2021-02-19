@@ -19,6 +19,7 @@ python3 k8s_resources.py | jq '[.[]|.gpu.requests]|add'
 python k8s_resources.py 
 ```
 
+Example output:
 ```text
 [
   {
@@ -181,3 +182,6 @@ python k8s_resources.py
 * [jq](https://stedolan.github.io/jq/)
 * [python3](https://pythonclock.org/)
 
+# Contributing
+
+Yoeah you can try, but be prepare that they will be rejected.
