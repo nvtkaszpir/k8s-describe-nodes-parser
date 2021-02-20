@@ -1,0 +1,1698 @@
+Name:               alpha
+Roles:              <none>
+Labels:             beta.kubernetes.io/arch=amd64
+                    beta.kubernetes.io/os=linux
+                    feature.node.kubernetes.io/cpu-cpuid.ADX=true
+                    feature.node.kubernetes.io/cpu-cpuid.AESNI=true
+                    feature.node.kubernetes.io/cpu-cpuid.AVX=true
+                    feature.node.kubernetes.io/cpu-cpuid.AVX2=true
+                    feature.node.kubernetes.io/cpu-cpuid.FMA3=true
+                    feature.node.kubernetes.io/cpu-cpuid.HLE=true
+                    feature.node.kubernetes.io/cpu-cpuid.IBPB=true
+                    feature.node.kubernetes.io/cpu-cpuid.RTM=true
+                    feature.node.kubernetes.io/custom-rdma.available=true
+                    feature.node.kubernetes.io/kernel-config.NO_HZ=true
+                    feature.node.kubernetes.io/kernel-config.NO_HZ_IDLE=true
+                    feature.node.kubernetes.io/kernel-version.full=4.15.0-121-generic
+                    feature.node.kubernetes.io/kernel-version.major=4
+                    feature.node.kubernetes.io/kernel-version.minor=15
+                    feature.node.kubernetes.io/kernel-version.revision=0
+                    feature.node.kubernetes.io/pci-10de.present=true
+                    feature.node.kubernetes.io/system-os_release.ID=ubuntu
+                    feature.node.kubernetes.io/system-os_release.VERSION_ID=18.04
+                    feature.node.kubernetes.io/system-os_release.VERSION_ID.major=18
+                    feature.node.kubernetes.io/system-os_release.VERSION_ID.minor=04
+                    kubernetes.io/arch=amd64
+                    kubernetes.io/hostname=alpha
+                    kubernetes.io/os=linux
+                    nvidia.com/cuda.driver.major=418
+                    nvidia.com/cuda.driver.minor=165
+                    nvidia.com/cuda.driver.rev=02
+                    nvidia.com/cuda.runtime.major=10
+                    nvidia.com/cuda.runtime.minor=1
+                    nvidia.com/gfd.timestamp=1613813900
+                    nvidia.com/gpu.compute.major=7
+                    nvidia.com/gpu.compute.minor=0
+                    nvidia.com/gpu.count=1
+                    nvidia.com/gpu.family=volta
+                    nvidia.com/gpu.memory=16130
+                    nvidia.com/gpu.product=Tesla-V100-SXM2-16GB
+                    nvidia.com/mig.strategy=mixed
+Annotations:        kubeadm.alpha.kubernetes.io/cri-socket: /var/run/dockershim.sock
+                    nfd.node.kubernetes.io/extended-resources: 
+                    nfd.node.kubernetes.io/feature-labels:
+                      cpu-cpuid.ADX,cpu-cpuid.AESNI,cpu-cpuid.AVX,cpu-cpuid.AVX2,cpu-cpuid.FMA3,cpu-cpuid.HLE,cpu-cpuid.IBPB,cpu-cpuid.RTM,custom-rdma.available...
+                    nfd.node.kubernetes.io/worker.version: v0.6.0
+                    node.alpha.kubernetes.io/ttl: 0
+                    volumes.kubernetes.io/controller-managed-attach-detach: true
+CreationTimestamp:  Wed, 20 Jan 2021 17:40:30 +0100
+Taints:             <none>
+Unschedulable:      false
+Lease:
+  HolderIdentity:  alpha
+  AcquireTime:     <unset>
+  RenewTime:       Sat, 20 Feb 2021 10:40:03 +0100
+Conditions:
+  Type                 Status  LastHeartbeatTime                 LastTransitionTime                Reason                       Message
+  ----                 ------  -----------------                 ------------------                ------                       -------
+  NetworkUnavailable   False   Thu, 21 Jan 2021 16:03:58 +0100   Thu, 21 Jan 2021 16:03:58 +0100   CalicoIsUp                   Calico is running on this node
+  MemoryPressure       False   Sat, 20 Feb 2021 10:40:02 +0100   Thu, 21 Jan 2021 16:03:31 +0100   KubeletHasSufficientMemory   kubelet has sufficient memory available
+  DiskPressure         False   Sat, 20 Feb 2021 10:40:02 +0100   Thu, 21 Jan 2021 16:03:31 +0100   KubeletHasNoDiskPressure     kubelet has no disk pressure
+  PIDPressure          False   Sat, 20 Feb 2021 10:40:02 +0100   Thu, 21 Jan 2021 16:03:31 +0100   KubeletHasSufficientPID      kubelet has sufficient PID available
+  Ready                True    Sat, 20 Feb 2021 10:40:02 +0100   Thu, 21 Jan 2021 16:03:34 +0100   KubeletReady                 kubelet is posting ready status. AppArmor enabled
+Addresses:
+  InternalIP:  192.168.10.109
+  Hostname:    alpha
+Capacity:
+  cpu:                9
+  ephemeral-storage:  206159720Ki
+  hugepages-2Mi:      0
+  memory:             60391Mi
+  nvidia.com/gpu:     1
+  pods:               110
+Allocatable:
+  cpu:                8900m
+  ephemeral-storage:  189996797638
+  hugepages-2Mi:      0
+  memory:             61487984Ki
+  nvidia.com/gpu:     1
+  pods:               110
+System Info:
+  Machine ID:                 07d356ebb84e47cc810c9dc1dadac536
+  System UUID:                E8EDF048-98DF-4696-AF9E-7FF1EB60E890
+  Boot ID:                    218ac86c-d7df-47fb-a428-8efdc22b5d45
+  Kernel Version:             4.15.0-121-generic
+  OS Image:                   Ubuntu 18.04.5 LTS
+  Operating System:           linux
+  Architecture:               amd64
+  Container Runtime Version:  docker://19.3.12
+  Kubelet Version:            v1.18.9
+  Kube-Proxy Version:         v1.18.9
+PodCIDR:                      10.233.79.0/24
+PodCIDRs:                     10.233.79.0/24
+Non-terminated Pods:          (12 in total)
+  Namespace                   Name                                         CPU Requests  CPU Limits  Memory Requests  Memory Limits  AGE
+  ---------                   ----                                         ------------  ----------  ---------------  -------------  ---
+  harbor                      harbor-harbor-trivy-0                        200m (2%)     1 (11%)     512Mi (0%)       1Gi (1%)       10d
+  ingress-nginx               ingress-nginx-controller-mft95               250m (2%)     1 (11%)     1Gi (1%)         4Gi (6%)       2d14h
+  kube-system                 calico-node-r9lff                            150m (1%)     300m (3%)   64M (0%)         500M (0%)      30d
+  kube-system                 kube-proxy-hrvs9                             0 (0%)        0 (0%)      0 (0%)           0 (0%)         30d
+  kube-system                 nginx-proxy-alpha                        25m (0%)      0 (0%)      32M (0%)         0 (0%)         30d
+  kube-system                 nodelocaldns-c2cmf                           100m (1%)     0 (0%)      70Mi (0%)        170Mi (0%)     30d
+  kube-system                 nvidia-device-plugin-7b2bg                   0 (0%)        0 (0%)      0 (0%)           0 (0%)         13d
+  monitoring                  dcgm-dcgm-exporter-6h2mh                     0 (0%)        0 (0%)      0 (0%)           0 (0%)         42h
+  monitoring                  grafana-promtail-n8jnc                       100m (1%)     200m (2%)   64Mi (0%)        128Mi (0%)     42h
+  monitoring                  prometheus-prometheus-node-exporter-9nvc5    100m (1%)     500m (5%)   64Mi (0%)        128Mi (0%)     42h
+  node-feature-discovery      gpu-feature-discovery-wzx9s                  0 (0%)        0 (0%)      0 (0%)           0 (0%)         29d
+  node-feature-discovery      nfd-worker-bx9t2                             0 (0%)        0 (0%)      0 (0%)           0 (0%)         30d
+Allocated resources:
+  (Total limits may be over 100 percent, i.e., overcommitted.)
+  Resource           Requests        Limits
+  --------           --------        ------
+  cpu                925m (10%)      3 (33%)
+  memory             1869366Ki (3%)  6315402496 (10%)
+  ephemeral-storage  0 (0%)          0 (0%)
+  hugepages-2Mi      0 (0%)          0 (0%)
+  nvidia.com/gpu     0               0
+Events:              <none>
+
+
+Name:               bravo
+Roles:              <none>
+Labels:             beta.kubernetes.io/arch=amd64
+                    beta.kubernetes.io/os=linux
+                    feature.node.kubernetes.io/cpu-cpuid.ADX=true
+                    feature.node.kubernetes.io/cpu-cpuid.AESNI=true
+                    feature.node.kubernetes.io/cpu-cpuid.AVX=true
+                    feature.node.kubernetes.io/cpu-cpuid.AVX2=true
+                    feature.node.kubernetes.io/cpu-cpuid.FMA3=true
+                    feature.node.kubernetes.io/cpu-cpuid.HLE=true
+                    feature.node.kubernetes.io/cpu-cpuid.IBPB=true
+                    feature.node.kubernetes.io/cpu-cpuid.RTM=true
+                    feature.node.kubernetes.io/custom-rdma.available=true
+                    feature.node.kubernetes.io/kernel-config.NO_HZ=true
+                    feature.node.kubernetes.io/kernel-config.NO_HZ_IDLE=true
+                    feature.node.kubernetes.io/kernel-version.full=4.15.0-121-generic
+                    feature.node.kubernetes.io/kernel-version.major=4
+                    feature.node.kubernetes.io/kernel-version.minor=15
+                    feature.node.kubernetes.io/kernel-version.revision=0
+                    feature.node.kubernetes.io/pci-10de.present=true
+                    feature.node.kubernetes.io/system-os_release.ID=ubuntu
+                    feature.node.kubernetes.io/system-os_release.VERSION_ID=18.04
+                    feature.node.kubernetes.io/system-os_release.VERSION_ID.major=18
+                    feature.node.kubernetes.io/system-os_release.VERSION_ID.minor=04
+                    kubernetes.io/arch=amd64
+                    kubernetes.io/hostname=bravo
+                    kubernetes.io/os=linux
+                    nvidia.com/cuda.driver.major=418
+                    nvidia.com/cuda.driver.minor=165
+                    nvidia.com/cuda.driver.rev=02
+                    nvidia.com/cuda.runtime.major=10
+                    nvidia.com/cuda.runtime.minor=1
+                    nvidia.com/gfd.timestamp=1613813988
+                    nvidia.com/gpu.compute.major=7
+                    nvidia.com/gpu.compute.minor=0
+                    nvidia.com/gpu.count=1
+                    nvidia.com/gpu.family=volta
+                    nvidia.com/gpu.memory=16130
+                    nvidia.com/gpu.product=Tesla-V100-SXM2-16GB
+                    nvidia.com/mig.strategy=mixed
+Annotations:        kubeadm.alpha.kubernetes.io/cri-socket: /var/run/dockershim.sock
+                    nfd.node.kubernetes.io/extended-resources: 
+                    nfd.node.kubernetes.io/feature-labels:
+                      cpu-cpuid.ADX,cpu-cpuid.AESNI,cpu-cpuid.AVX,cpu-cpuid.AVX2,cpu-cpuid.FMA3,cpu-cpuid.HLE,cpu-cpuid.IBPB,cpu-cpuid.RTM,custom-rdma.available...
+                    nfd.node.kubernetes.io/worker.version: v0.6.0
+                    node.alpha.kubernetes.io/ttl: 0
+                    volumes.kubernetes.io/controller-managed-attach-detach: true
+CreationTimestamp:  Wed, 20 Jan 2021 17:40:30 +0100
+Taints:             <none>
+Unschedulable:      false
+Lease:
+  HolderIdentity:  bravo
+  AcquireTime:     <unset>
+  RenewTime:       Sat, 20 Feb 2021 10:39:57 +0100
+Conditions:
+  Type                 Status  LastHeartbeatTime                 LastTransitionTime                Reason                       Message
+  ----                 ------  -----------------                 ------------------                ------                       -------
+  NetworkUnavailable   False   Thu, 21 Jan 2021 16:03:42 +0100   Thu, 21 Jan 2021 16:03:42 +0100   CalicoIsUp                   Calico is running on this node
+  MemoryPressure       False   Sat, 20 Feb 2021 10:40:04 +0100   Thu, 21 Jan 2021 15:58:36 +0100   KubeletHasSufficientMemory   kubelet has sufficient memory available
+  DiskPressure         False   Sat, 20 Feb 2021 10:40:04 +0100   Thu, 21 Jan 2021 15:58:36 +0100   KubeletHasNoDiskPressure     kubelet has no disk pressure
+  PIDPressure          False   Sat, 20 Feb 2021 10:40:04 +0100   Thu, 21 Jan 2021 15:58:36 +0100   KubeletHasSufficientPID      kubelet has sufficient PID available
+  Ready                True    Sat, 20 Feb 2021 10:40:04 +0100   Thu, 21 Jan 2021 16:03:33 +0100   KubeletReady                 kubelet is posting ready status. AppArmor enabled
+Addresses:
+  InternalIP:  192.168.10.110
+  Hostname:    bravo
+Capacity:
+  cpu:                9
+  ephemeral-storage:  206159720Ki
+  hugepages-2Mi:      0
+  memory:             60391Mi
+  nvidia.com/gpu:     1
+  pods:               110
+Allocatable:
+  cpu:                8900m
+  ephemeral-storage:  189996797638
+  hugepages-2Mi:      0
+  memory:             61487984Ki
+  nvidia.com/gpu:     1
+  pods:               110
+System Info:
+  Machine ID:                 4d1a8de747f54caab430c93536dee41b
+  System UUID:                EC23EE5A-ABBD-474D-9C3D-A893DD8BDA9A
+  Boot ID:                    8bbe4792-a854-4276-8579-3e42fec1ac72
+  Kernel Version:             4.15.0-121-generic
+  OS Image:                   Ubuntu 18.04.5 LTS
+  Operating System:           linux
+  Architecture:               amd64
+  Container Runtime Version:  docker://19.3.12
+  Kubelet Version:            v1.18.9
+  Kube-Proxy Version:         v1.18.9
+PodCIDR:                      10.233.80.0/24
+PodCIDRs:                     10.233.80.0/24
+Non-terminated Pods:          (13 in total)
+  Namespace                   Name                                           CPU Requests  CPU Limits  Memory Requests  Memory Limits  AGE
+  ---------                   ----                                           ------------  ----------  ---------------  -------------  ---
+  ingress-nginx               ingress-nginx-controller-q6cxt                 250m (2%)     1 (11%)     1Gi (1%)         4Gi (6%)       2d14h
+  kube-system                 calico-node-sqxjm                              150m (1%)     300m (3%)   64M (0%)         500M (0%)      30d
+  kube-system                 kube-proxy-5nf7z                               0 (0%)        0 (0%)      0 (0%)           0 (0%)         30d
+  kube-system                 kubernetes-metrics-scraper-5c78444f64-wtk64    0 (0%)        0 (0%)      0 (0%)           0 (0%)         2d18h
+  kube-system                 metrics-server-5855ddf686-jns9r                0 (0%)        0 (0%)      0 (0%)           0 (0%)         2d18h
+  kube-system                 nginx-proxy-bravo                          25m (0%)      0 (0%)      32M (0%)         0 (0%)         30d
+  kube-system                 nodelocaldns-gjc7j                             100m (1%)     0 (0%)      70Mi (0%)        170Mi (0%)     30d
+  kube-system                 nvidia-device-plugin-58hql                     0 (0%)        0 (0%)      0 (0%)           0 (0%)         13d
+  monitoring                  dcgm-dcgm-exporter-r8vbd                       0 (0%)        0 (0%)      0 (0%)           0 (0%)         42h
+  monitoring                  grafana-promtail-cbnpp                         100m (1%)     200m (2%)   64Mi (0%)        128Mi (0%)     42h
+  monitoring                  prometheus-prometheus-node-exporter-7cmkz      100m (1%)     500m (5%)   64Mi (0%)        128Mi (0%)     42h
+  node-feature-discovery      gpu-feature-discovery-9v7xx                    0 (0%)        0 (0%)      0 (0%)           0 (0%)         29d
+  node-feature-discovery      nfd-worker-brwxz                               0 (0%)        0 (0%)      0 (0%)           0 (0%)         30d
+Allocated resources:
+  (Total limits may be over 100 percent, i.e., overcommitted.)
+  Resource           Requests        Limits
+  --------           --------        ------
+  cpu                725m (8%)       2 (22%)
+  memory             1345078Ki (2%)  5241660672 (8%)
+  ephemeral-storage  0 (0%)          0 (0%)
+  hugepages-2Mi      0 (0%)          0 (0%)
+  nvidia.com/gpu     0               0
+Events:              <none>
+
+
+Name:               charlie
+Roles:              <none>
+Labels:             beta.kubernetes.io/arch=amd64
+                    beta.kubernetes.io/os=linux
+                    feature.node.kubernetes.io/cpu-cpuid.ADX=true
+                    feature.node.kubernetes.io/cpu-cpuid.AESNI=true
+                    feature.node.kubernetes.io/cpu-cpuid.AVX=true
+                    feature.node.kubernetes.io/cpu-cpuid.AVX2=true
+                    feature.node.kubernetes.io/cpu-cpuid.FMA3=true
+                    feature.node.kubernetes.io/cpu-cpuid.HLE=true
+                    feature.node.kubernetes.io/cpu-cpuid.IBPB=true
+                    feature.node.kubernetes.io/cpu-cpuid.RTM=true
+                    feature.node.kubernetes.io/custom-rdma.available=true
+                    feature.node.kubernetes.io/kernel-config.NO_HZ=true
+                    feature.node.kubernetes.io/kernel-config.NO_HZ_IDLE=true
+                    feature.node.kubernetes.io/kernel-version.full=4.15.0-121-generic
+                    feature.node.kubernetes.io/kernel-version.major=4
+                    feature.node.kubernetes.io/kernel-version.minor=15
+                    feature.node.kubernetes.io/kernel-version.revision=0
+                    feature.node.kubernetes.io/pci-10de.present=true
+                    feature.node.kubernetes.io/system-os_release.ID=ubuntu
+                    feature.node.kubernetes.io/system-os_release.VERSION_ID=18.04
+                    feature.node.kubernetes.io/system-os_release.VERSION_ID.major=18
+                    feature.node.kubernetes.io/system-os_release.VERSION_ID.minor=04
+                    kubernetes.io/arch=amd64
+                    kubernetes.io/hostname=charlie
+                    kubernetes.io/os=linux
+                    nvidia.com/cuda.driver.major=418
+                    nvidia.com/cuda.driver.minor=165
+                    nvidia.com/cuda.driver.rev=02
+                    nvidia.com/cuda.runtime.major=10
+                    nvidia.com/cuda.runtime.minor=1
+                    nvidia.com/gfd.timestamp=1613813902
+                    nvidia.com/gpu.compute.major=7
+                    nvidia.com/gpu.compute.minor=0
+                    nvidia.com/gpu.count=1
+                    nvidia.com/gpu.family=volta
+                    nvidia.com/gpu.memory=16130
+                    nvidia.com/gpu.product=Tesla-V100-SXM2-16GB
+                    nvidia.com/mig.strategy=mixed
+Annotations:        kubeadm.alpha.kubernetes.io/cri-socket: /var/run/dockershim.sock
+                    nfd.node.kubernetes.io/extended-resources: 
+                    nfd.node.kubernetes.io/feature-labels:
+                      cpu-cpuid.ADX,cpu-cpuid.AESNI,cpu-cpuid.AVX,cpu-cpuid.AVX2,cpu-cpuid.FMA3,cpu-cpuid.HLE,cpu-cpuid.IBPB,cpu-cpuid.RTM,custom-rdma.available...
+                    nfd.node.kubernetes.io/worker.version: v0.6.0
+                    node.alpha.kubernetes.io/ttl: 0
+                    volumes.kubernetes.io/controller-managed-attach-detach: true
+CreationTimestamp:  Wed, 20 Jan 2021 17:40:30 +0100
+Taints:             <none>
+Unschedulable:      false
+Lease:
+  HolderIdentity:  charlie
+  AcquireTime:     <unset>
+  RenewTime:       Sat, 20 Feb 2021 10:40:07 +0100
+Conditions:
+  Type                 Status  LastHeartbeatTime                 LastTransitionTime                Reason                       Message
+  ----                 ------  -----------------                 ------------------                ------                       -------
+  NetworkUnavailable   False   Thu, 21 Jan 2021 16:03:39 +0100   Thu, 21 Jan 2021 16:03:39 +0100   CalicoIsUp                   Calico is running on this node
+  MemoryPressure       False   Sat, 20 Feb 2021 10:40:06 +0100   Thu, 21 Jan 2021 16:03:23 +0100   KubeletHasSufficientMemory   kubelet has sufficient memory available
+  DiskPressure         False   Sat, 20 Feb 2021 10:40:06 +0100   Thu, 21 Jan 2021 16:03:23 +0100   KubeletHasNoDiskPressure     kubelet has no disk pressure
+  PIDPressure          False   Sat, 20 Feb 2021 10:40:06 +0100   Thu, 21 Jan 2021 16:03:23 +0100   KubeletHasSufficientPID      kubelet has sufficient PID available
+  Ready                True    Sat, 20 Feb 2021 10:40:06 +0100   Thu, 21 Jan 2021 16:03:33 +0100   KubeletReady                 kubelet is posting ready status. AppArmor enabled
+Addresses:
+  InternalIP:  192.168.10.111
+  Hostname:    charlie
+Capacity:
+  cpu:                9
+  ephemeral-storage:  206159720Ki
+  hugepages-2Mi:      0
+  memory:             60391Mi
+  nvidia.com/gpu:     1
+  pods:               110
+Allocatable:
+  cpu:                8900m
+  ephemeral-storage:  189996797638
+  hugepages-2Mi:      0
+  memory:             61487984Ki
+  nvidia.com/gpu:     1
+  pods:               110
+System Info:
+  Machine ID:                 9ffc2541143d4dc989524730b7f52bc4
+  System UUID:                A92F46F2-38E2-4352-A253-BC2760D9A07F
+  Boot ID:                    59b5c78c-90cb-465d-a023-ce3947ff8e93
+  Kernel Version:             4.15.0-121-generic
+  OS Image:                   Ubuntu 18.04.5 LTS
+  Operating System:           linux
+  Architecture:               amd64
+  Container Runtime Version:  docker://19.3.12
+  Kubelet Version:            v1.18.9
+  Kube-Proxy Version:         v1.18.9
+PodCIDR:                      10.233.81.0/24
+PodCIDRs:                     10.233.81.0/24
+Non-terminated Pods:          (11 in total)
+  Namespace                   Name                                         CPU Requests  CPU Limits  Memory Requests  Memory Limits  AGE
+  ---------                   ----                                         ------------  ----------  ---------------  -------------  ---
+  ingress-nginx               ingress-nginx-controller-k8n7j               250m (2%)     1 (11%)     1Gi (1%)         4Gi (6%)       2d14h
+  kube-system                 calico-node-9z89l                            150m (1%)     300m (3%)   64M (0%)         500M (0%)      30d
+  kube-system                 kube-proxy-pgrd4                             0 (0%)        0 (0%)      0 (0%)           0 (0%)         30d
+  kube-system                 nginx-proxy-charlie                        25m (0%)      0 (0%)      32M (0%)         0 (0%)         30d
+  kube-system                 nodelocaldns-prrl5                           100m (1%)     0 (0%)      70Mi (0%)        170Mi (0%)     30d
+  kube-system                 nvidia-device-plugin-wk869                   0 (0%)        0 (0%)      0 (0%)           0 (0%)         13d
+  monitoring                  dcgm-dcgm-exporter-7lfqt                     0 (0%)        0 (0%)      0 (0%)           0 (0%)         42h
+  monitoring                  grafana-promtail-ch9rv                       100m (1%)     200m (2%)   64Mi (0%)        128Mi (0%)     42h
+  monitoring                  prometheus-prometheus-node-exporter-srv58    100m (1%)     500m (5%)   64Mi (0%)        128Mi (0%)     42h
+  node-feature-discovery      gpu-feature-discovery-p7mgr                  0 (0%)        0 (0%)      0 (0%)           0 (0%)         29d
+  node-feature-discovery      nfd-worker-fw9fj                             0 (0%)        0 (0%)      0 (0%)           0 (0%)         30d
+Allocated resources:
+  (Total limits may be over 100 percent, i.e., overcommitted.)
+  Resource           Requests        Limits
+  --------           --------        ------
+  cpu                725m (8%)       2 (22%)
+  memory             1345078Ki (2%)  5241660672 (8%)
+  ephemeral-storage  0 (0%)          0 (0%)
+  hugepages-2Mi      0 (0%)          0 (0%)
+  nvidia.com/gpu     0               0
+Events:              <none>
+
+
+Name:               delta
+Roles:              <none>
+Labels:             beta.kubernetes.io/arch=amd64
+                    beta.kubernetes.io/os=linux
+                    feature.node.kubernetes.io/cpu-cpuid.ADX=true
+                    feature.node.kubernetes.io/cpu-cpuid.AESNI=true
+                    feature.node.kubernetes.io/cpu-cpuid.AVX=true
+                    feature.node.kubernetes.io/cpu-cpuid.AVX2=true
+                    feature.node.kubernetes.io/cpu-cpuid.FMA3=true
+                    feature.node.kubernetes.io/cpu-cpuid.HLE=true
+                    feature.node.kubernetes.io/cpu-cpuid.IBPB=true
+                    feature.node.kubernetes.io/cpu-cpuid.RTM=true
+                    feature.node.kubernetes.io/custom-rdma.available=true
+                    feature.node.kubernetes.io/kernel-config.NO_HZ=true
+                    feature.node.kubernetes.io/kernel-config.NO_HZ_IDLE=true
+                    feature.node.kubernetes.io/kernel-version.full=4.15.0-121-generic
+                    feature.node.kubernetes.io/kernel-version.major=4
+                    feature.node.kubernetes.io/kernel-version.minor=15
+                    feature.node.kubernetes.io/kernel-version.revision=0
+                    feature.node.kubernetes.io/pci-10de.present=true
+                    feature.node.kubernetes.io/system-os_release.ID=ubuntu
+                    feature.node.kubernetes.io/system-os_release.VERSION_ID=18.04
+                    feature.node.kubernetes.io/system-os_release.VERSION_ID.major=18
+                    feature.node.kubernetes.io/system-os_release.VERSION_ID.minor=04
+                    kubernetes.io/arch=amd64
+                    kubernetes.io/hostname=delta
+                    kubernetes.io/os=linux
+                    nvidia.com/cuda.driver.major=418
+                    nvidia.com/cuda.driver.minor=165
+                    nvidia.com/cuda.driver.rev=02
+                    nvidia.com/cuda.runtime.major=10
+                    nvidia.com/cuda.runtime.minor=1
+                    nvidia.com/gfd.timestamp=1613813948
+                    nvidia.com/gpu.compute.major=7
+                    nvidia.com/gpu.compute.minor=0
+                    nvidia.com/gpu.count=1
+                    nvidia.com/gpu.family=volta
+                    nvidia.com/gpu.memory=16130
+                    nvidia.com/gpu.product=Tesla-V100-SXM2-16GB
+                    nvidia.com/mig.strategy=mixed
+Annotations:        kubeadm.alpha.kubernetes.io/cri-socket: /var/run/dockershim.sock
+                    nfd.node.kubernetes.io/extended-resources: 
+                    nfd.node.kubernetes.io/feature-labels:
+                      cpu-cpuid.ADX,cpu-cpuid.AESNI,cpu-cpuid.AVX,cpu-cpuid.AVX2,cpu-cpuid.FMA3,cpu-cpuid.HLE,cpu-cpuid.IBPB,cpu-cpuid.RTM,custom-rdma.available...
+                    nfd.node.kubernetes.io/worker.version: v0.6.0
+                    node.alpha.kubernetes.io/ttl: 0
+                    volumes.kubernetes.io/controller-managed-attach-detach: true
+CreationTimestamp:  Wed, 20 Jan 2021 17:40:30 +0100
+Taints:             <none>
+Unschedulable:      false
+Lease:
+  HolderIdentity:  delta
+  AcquireTime:     <unset>
+  RenewTime:       Sat, 20 Feb 2021 10:40:07 +0100
+Conditions:
+  Type                 Status  LastHeartbeatTime                 LastTransitionTime                Reason                       Message
+  ----                 ------  -----------------                 ------------------                ------                       -------
+  NetworkUnavailable   False   Thu, 21 Jan 2021 16:03:48 +0100   Thu, 21 Jan 2021 16:03:48 +0100   CalicoIsUp                   Calico is running on this node
+  MemoryPressure       False   Sat, 20 Feb 2021 10:39:59 +0100   Thu, 21 Jan 2021 16:03:25 +0100   KubeletHasSufficientMemory   kubelet has sufficient memory available
+  DiskPressure         False   Sat, 20 Feb 2021 10:39:59 +0100   Thu, 21 Jan 2021 16:03:25 +0100   KubeletHasNoDiskPressure     kubelet has no disk pressure
+  PIDPressure          False   Sat, 20 Feb 2021 10:39:59 +0100   Thu, 21 Jan 2021 16:03:25 +0100   KubeletHasSufficientPID      kubelet has sufficient PID available
+  Ready                True    Sat, 20 Feb 2021 10:39:59 +0100   Thu, 21 Jan 2021 16:03:34 +0100   KubeletReady                 kubelet is posting ready status. AppArmor enabled
+Addresses:
+  InternalIP:  192.168.10.112
+  Hostname:    delta
+Capacity:
+  cpu:                9
+  ephemeral-storage:  206159720Ki
+  hugepages-2Mi:      0
+  memory:             60391Mi
+  nvidia.com/gpu:     1
+  pods:               110
+Allocatable:
+  cpu:                8900m
+  ephemeral-storage:  189996797638
+  hugepages-2Mi:      0
+  memory:             61487984Ki
+  nvidia.com/gpu:     1
+  pods:               110
+System Info:
+  Machine ID:                 21734ad0c1c64fd88c1d92dd83996f39
+  System UUID:                A425CB23-1A5D-48D3-8B81-58CD27A25A29
+  Boot ID:                    de3b0e29-37fe-4b70-9d2f-a19b298d055b
+  Kernel Version:             4.15.0-121-generic
+  OS Image:                   Ubuntu 18.04.5 LTS
+  Operating System:           linux
+  Architecture:               amd64
+  Container Runtime Version:  docker://19.3.12
+  Kubelet Version:            v1.18.9
+  Kube-Proxy Version:         v1.18.9
+PodCIDR:                      10.233.83.0/24
+PodCIDRs:                     10.233.83.0/24
+Non-terminated Pods:          (12 in total)
+  Namespace                   Name                                         CPU Requests  CPU Limits  Memory Requests  Memory Limits  AGE
+  ---------                   ----                                         ------------  ----------  ---------------  -------------  ---
+  harbor                      harbor-harbor-database-0                     0 (0%)        0 (0%)      0 (0%)           0 (0%)         10d
+  ingress-nginx               ingress-nginx-controller-2ckmb               250m (2%)     1 (11%)     1Gi (1%)         4Gi (6%)       2d14h
+  kube-system                 calico-node-vzl4t                            150m (1%)     300m (3%)   64M (0%)         500M (0%)      30d
+  kube-system                 kube-proxy-l8t9g                             0 (0%)        0 (0%)      0 (0%)           0 (0%)         30d
+  kube-system                 nginx-proxy-delta                        25m (0%)      0 (0%)      32M (0%)         0 (0%)         30d
+  kube-system                 nodelocaldns-hgbdw                           100m (1%)     0 (0%)      70Mi (0%)        170Mi (0%)     30d
+  kube-system                 nvidia-device-plugin-rldx9                   0 (0%)        0 (0%)      0 (0%)           0 (0%)         13d
+  monitoring                  dcgm-dcgm-exporter-b5zcn                     0 (0%)        0 (0%)      0 (0%)           0 (0%)         42h
+  monitoring                  grafana-promtail-6c54s                       100m (1%)     200m (2%)   64Mi (0%)        128Mi (0%)     42h
+  monitoring                  prometheus-prometheus-node-exporter-ds9q8    100m (1%)     500m (5%)   64Mi (0%)        128Mi (0%)     42h
+  node-feature-discovery      gpu-feature-discovery-v9q2w                  0 (0%)        0 (0%)      0 (0%)           0 (0%)         30d
+  node-feature-discovery      nfd-worker-x56sd                             0 (0%)        0 (0%)      0 (0%)           0 (0%)         30d
+Allocated resources:
+  (Total limits may be over 100 percent, i.e., overcommitted.)
+  Resource           Requests        Limits
+  --------           --------        ------
+  cpu                725m (8%)       2 (22%)
+  memory             1345078Ki (2%)  5241660672 (8%)
+  ephemeral-storage  0 (0%)          0 (0%)
+  hugepages-2Mi      0 (0%)          0 (0%)
+  nvidia.com/gpu     0               0
+Events:              <none>
+
+
+Name:               echo
+Roles:              <none>
+Labels:             beta.kubernetes.io/arch=amd64
+                    beta.kubernetes.io/os=linux
+                    feature.node.kubernetes.io/cpu-cpuid.ADX=true
+                    feature.node.kubernetes.io/cpu-cpuid.AESNI=true
+                    feature.node.kubernetes.io/cpu-cpuid.AVX=true
+                    feature.node.kubernetes.io/cpu-cpuid.AVX2=true
+                    feature.node.kubernetes.io/cpu-cpuid.FMA3=true
+                    feature.node.kubernetes.io/cpu-cpuid.HLE=true
+                    feature.node.kubernetes.io/cpu-cpuid.IBPB=true
+                    feature.node.kubernetes.io/cpu-cpuid.RTM=true
+                    feature.node.kubernetes.io/custom-rdma.available=true
+                    feature.node.kubernetes.io/kernel-config.NO_HZ=true
+                    feature.node.kubernetes.io/kernel-config.NO_HZ_IDLE=true
+                    feature.node.kubernetes.io/kernel-version.full=4.15.0-121-generic
+                    feature.node.kubernetes.io/kernel-version.major=4
+                    feature.node.kubernetes.io/kernel-version.minor=15
+                    feature.node.kubernetes.io/kernel-version.revision=0
+                    feature.node.kubernetes.io/pci-10de.present=true
+                    feature.node.kubernetes.io/system-os_release.ID=ubuntu
+                    feature.node.kubernetes.io/system-os_release.VERSION_ID=18.04
+                    feature.node.kubernetes.io/system-os_release.VERSION_ID.major=18
+                    feature.node.kubernetes.io/system-os_release.VERSION_ID.minor=04
+                    kubernetes.io/arch=amd64
+                    kubernetes.io/hostname=echo
+                    kubernetes.io/os=linux
+                    nvidia.com/cuda.driver.major=418
+                    nvidia.com/cuda.driver.minor=165
+                    nvidia.com/cuda.driver.rev=02
+                    nvidia.com/cuda.runtime.major=10
+                    nvidia.com/cuda.runtime.minor=1
+                    nvidia.com/gfd.timestamp=1613813957
+                    nvidia.com/gpu.compute.major=7
+                    nvidia.com/gpu.compute.minor=0
+                    nvidia.com/gpu.count=1
+                    nvidia.com/gpu.family=volta
+                    nvidia.com/gpu.memory=16130
+                    nvidia.com/gpu.product=Tesla-V100-SXM2-16GB
+                    nvidia.com/mig.strategy=mixed
+Annotations:        kubeadm.alpha.kubernetes.io/cri-socket: /var/run/dockershim.sock
+                    nfd.node.kubernetes.io/extended-resources: 
+                    nfd.node.kubernetes.io/feature-labels:
+                      cpu-cpuid.ADX,cpu-cpuid.AESNI,cpu-cpuid.AVX,cpu-cpuid.AVX2,cpu-cpuid.FMA3,cpu-cpuid.HLE,cpu-cpuid.IBPB,cpu-cpuid.RTM,custom-rdma.available...
+                    nfd.node.kubernetes.io/worker.version: v0.6.0
+                    node.alpha.kubernetes.io/ttl: 0
+                    volumes.kubernetes.io/controller-managed-attach-detach: true
+CreationTimestamp:  Wed, 20 Jan 2021 17:40:30 +0100
+Taints:             <none>
+Unschedulable:      false
+Lease:
+  HolderIdentity:  echo
+  AcquireTime:     <unset>
+  RenewTime:       Sat, 20 Feb 2021 10:40:03 +0100
+Conditions:
+  Type                 Status  LastHeartbeatTime                 LastTransitionTime                Reason                       Message
+  ----                 ------  -----------------                 ------------------                ------                       -------
+  NetworkUnavailable   False   Thu, 21 Jan 2021 16:04:21 +0100   Thu, 21 Jan 2021 16:04:21 +0100   CalicoIsUp                   Calico is running on this node
+  MemoryPressure       False   Sat, 20 Feb 2021 10:40:00 +0100   Thu, 21 Jan 2021 16:03:37 +0100   KubeletHasSufficientMemory   kubelet has sufficient memory available
+  DiskPressure         False   Sat, 20 Feb 2021 10:40:00 +0100   Thu, 21 Jan 2021 16:03:37 +0100   KubeletHasNoDiskPressure     kubelet has no disk pressure
+  PIDPressure          False   Sat, 20 Feb 2021 10:40:00 +0100   Thu, 21 Jan 2021 16:03:37 +0100   KubeletHasSufficientPID      kubelet has sufficient PID available
+  Ready                True    Sat, 20 Feb 2021 10:40:00 +0100   Thu, 21 Jan 2021 16:03:47 +0100   KubeletReady                 kubelet is posting ready status. AppArmor enabled
+Addresses:
+  InternalIP:  192.168.10.113
+  Hostname:    echo
+Capacity:
+  cpu:                9
+  ephemeral-storage:  206159720Ki
+  hugepages-2Mi:      0
+  memory:             60391Mi
+  nvidia.com/gpu:     1
+  pods:               110
+Allocatable:
+  cpu:                8900m
+  ephemeral-storage:  189996797638
+  hugepages-2Mi:      0
+  memory:             61487984Ki
+  nvidia.com/gpu:     1
+  pods:               110
+System Info:
+  Machine ID:                 447f6c65dc824194978ee5e99769083b
+  System UUID:                C3205642-2D92-4763-8506-7826D25F34D5
+  Boot ID:                    965926e6-01d7-482d-9ee3-36ac33775c9a
+  Kernel Version:             4.15.0-121-generic
+  OS Image:                   Ubuntu 18.04.5 LTS
+  Operating System:           linux
+  Architecture:               amd64
+  Container Runtime Version:  docker://19.3.12
+  Kubelet Version:            v1.18.9
+  Kube-Proxy Version:         v1.18.9
+PodCIDR:                      10.233.84.0/24
+PodCIDRs:                     10.233.84.0/24
+Non-terminated Pods:          (11 in total)
+  Namespace                   Name                                         CPU Requests  CPU Limits  Memory Requests  Memory Limits  AGE
+  ---------                   ----                                         ------------  ----------  ---------------  -------------  ---
+  ingress-nginx               ingress-nginx-controller-bp9pm               250m (2%)     1 (11%)     1Gi (1%)         4Gi (6%)       2d14h
+  kube-system                 calico-node-5jmrr                            150m (1%)     300m (3%)   64M (0%)         500M (0%)      30d
+  kube-system                 kube-proxy-f2jb5                             0 (0%)        0 (0%)      0 (0%)           0 (0%)         30d
+  kube-system                 nginx-proxy-echo                        25m (0%)      0 (0%)      32M (0%)         0 (0%)         30d
+  kube-system                 nodelocaldns-z8fl9                           100m (1%)     0 (0%)      70Mi (0%)        170Mi (0%)     30d
+  kube-system                 nvidia-device-plugin-nfjl9                   0 (0%)        0 (0%)      0 (0%)           0 (0%)         13d
+  monitoring                  dcgm-dcgm-exporter-dx6ps                     0 (0%)        0 (0%)      0 (0%)           0 (0%)         42h
+  monitoring                  grafana-promtail-tlzvm                       100m (1%)     200m (2%)   64Mi (0%)        128Mi (0%)     42h
+  monitoring                  prometheus-prometheus-node-exporter-766r9    100m (1%)     500m (5%)   64Mi (0%)        128Mi (0%)     42h
+  node-feature-discovery      gpu-feature-discovery-2d7f2                  0 (0%)        0 (0%)      0 (0%)           0 (0%)         29d
+  node-feature-discovery      nfd-worker-m87dm                             0 (0%)        0 (0%)      0 (0%)           0 (0%)         30d
+Allocated resources:
+  (Total limits may be over 100 percent, i.e., overcommitted.)
+  Resource           Requests        Limits
+  --------           --------        ------
+  cpu                725m (8%)       2 (22%)
+  memory             1345078Ki (2%)  5241660672 (8%)
+  ephemeral-storage  0 (0%)          0 (0%)
+  hugepages-2Mi      0 (0%)          0 (0%)
+  nvidia.com/gpu     0               0
+Events:              <none>
+
+
+Name:               foxtrot
+Roles:              <none>
+Labels:             beta.kubernetes.io/arch=amd64
+                    beta.kubernetes.io/os=linux
+                    feature.node.kubernetes.io/cpu-cpuid.ADX=true
+                    feature.node.kubernetes.io/cpu-cpuid.AESNI=true
+                    feature.node.kubernetes.io/cpu-cpuid.AVX=true
+                    feature.node.kubernetes.io/cpu-cpuid.AVX2=true
+                    feature.node.kubernetes.io/cpu-cpuid.FMA3=true
+                    feature.node.kubernetes.io/cpu-cpuid.HLE=true
+                    feature.node.kubernetes.io/cpu-cpuid.IBPB=true
+                    feature.node.kubernetes.io/cpu-cpuid.RTM=true
+                    feature.node.kubernetes.io/custom-rdma.available=true
+                    feature.node.kubernetes.io/kernel-config.NO_HZ=true
+                    feature.node.kubernetes.io/kernel-config.NO_HZ_IDLE=true
+                    feature.node.kubernetes.io/kernel-version.full=4.15.0-121-generic
+                    feature.node.kubernetes.io/kernel-version.major=4
+                    feature.node.kubernetes.io/kernel-version.minor=15
+                    feature.node.kubernetes.io/kernel-version.revision=0
+                    feature.node.kubernetes.io/pci-10de.present=true
+                    feature.node.kubernetes.io/system-os_release.ID=ubuntu
+                    feature.node.kubernetes.io/system-os_release.VERSION_ID=18.04
+                    feature.node.kubernetes.io/system-os_release.VERSION_ID.major=18
+                    feature.node.kubernetes.io/system-os_release.VERSION_ID.minor=04
+                    kubernetes.io/arch=amd64
+                    kubernetes.io/hostname=foxtrot
+                    kubernetes.io/os=linux
+                    nvidia.com/cuda.driver.major=418
+                    nvidia.com/cuda.driver.minor=165
+                    nvidia.com/cuda.driver.rev=02
+                    nvidia.com/cuda.runtime.major=10
+                    nvidia.com/cuda.runtime.minor=1
+                    nvidia.com/gfd.timestamp=1613813914
+                    nvidia.com/gpu.compute.major=7
+                    nvidia.com/gpu.compute.minor=0
+                    nvidia.com/gpu.count=1
+                    nvidia.com/gpu.family=volta
+                    nvidia.com/gpu.memory=16130
+                    nvidia.com/gpu.product=Tesla-V100-SXM2-16GB
+                    nvidia.com/mig.strategy=mixed
+Annotations:        kubeadm.alpha.kubernetes.io/cri-socket: /var/run/dockershim.sock
+                    nfd.node.kubernetes.io/extended-resources: 
+                    nfd.node.kubernetes.io/feature-labels:
+                      cpu-cpuid.ADX,cpu-cpuid.AESNI,cpu-cpuid.AVX,cpu-cpuid.AVX2,cpu-cpuid.FMA3,cpu-cpuid.HLE,cpu-cpuid.IBPB,cpu-cpuid.RTM,custom-rdma.available...
+                    nfd.node.kubernetes.io/worker.version: v0.6.0
+                    node.alpha.kubernetes.io/ttl: 0
+                    volumes.kubernetes.io/controller-managed-attach-detach: true
+CreationTimestamp:  Wed, 20 Jan 2021 17:40:30 +0100
+Taints:             <none>
+Unschedulable:      false
+Lease:
+  HolderIdentity:  foxtrot
+  AcquireTime:     <unset>
+  RenewTime:       Sat, 20 Feb 2021 10:40:04 +0100
+Conditions:
+  Type                 Status  LastHeartbeatTime                 LastTransitionTime                Reason                       Message
+  ----                 ------  -----------------                 ------------------                ------                       -------
+  NetworkUnavailable   False   Thu, 21 Jan 2021 16:04:05 +0100   Thu, 21 Jan 2021 16:04:05 +0100   CalicoIsUp                   Calico is running on this node
+  MemoryPressure       False   Sat, 20 Feb 2021 10:40:00 +0100   Thu, 21 Jan 2021 16:03:37 +0100   KubeletHasSufficientMemory   kubelet has sufficient memory available
+  DiskPressure         False   Sat, 20 Feb 2021 10:40:00 +0100   Thu, 21 Jan 2021 16:03:37 +0100   KubeletHasNoDiskPressure     kubelet has no disk pressure
+  PIDPressure          False   Sat, 20 Feb 2021 10:40:00 +0100   Thu, 21 Jan 2021 16:03:37 +0100   KubeletHasSufficientPID      kubelet has sufficient PID available
+  Ready                True    Sat, 20 Feb 2021 10:40:00 +0100   Thu, 21 Jan 2021 16:03:40 +0100   KubeletReady                 kubelet is posting ready status. AppArmor enabled
+Addresses:
+  InternalIP:  192.168.10.114
+  Hostname:    foxtrot
+Capacity:
+  cpu:                9
+  ephemeral-storage:  206159720Ki
+  hugepages-2Mi:      0
+  memory:             60391Mi
+  nvidia.com/gpu:     1
+  pods:               110
+Allocatable:
+  cpu:                8900m
+  ephemeral-storage:  189996797638
+  hugepages-2Mi:      0
+  memory:             61487984Ki
+  nvidia.com/gpu:     1
+  pods:               110
+System Info:
+  Machine ID:                 0dfcebf386c04aad8af12e924ec83f86
+  System UUID:                758D5F81-48D7-43F4-9782-78A3CA917120
+  Boot ID:                    ed569590-6a16-4edd-9fe3-7cdc2e3e076c
+  Kernel Version:             4.15.0-121-generic
+  OS Image:                   Ubuntu 18.04.5 LTS
+  Operating System:           linux
+  Architecture:               amd64
+  Container Runtime Version:  docker://19.3.12
+  Kubelet Version:            v1.18.9
+  Kube-Proxy Version:         v1.18.9
+PodCIDR:                      10.233.82.0/24
+PodCIDRs:                     10.233.82.0/24
+Non-terminated Pods:          (19 in total)
+  Namespace                   Name                                            CPU Requests  CPU Limits  Memory Requests  Memory Limits  AGE
+  ---------                   ----                                            ------------  ----------  ---------------  -------------  ---
+  harbor                      harbor-harbor-chartmuseum-5df49655-5ph4h        0 (0%)        0 (0%)      0 (0%)           0 (0%)         10d
+  harbor                      harbor-harbor-clair-d8c847fbf-gl4t5             0 (0%)        0 (0%)      0 (0%)           0 (0%)         10d
+  harbor                      harbor-harbor-core-7c67f99dc7-4zl9z             0 (0%)        0 (0%)      0 (0%)           0 (0%)         10d
+  harbor                      harbor-harbor-jobservice-67bdcc66dd-5w2ld       0 (0%)        0 (0%)      0 (0%)           0 (0%)         10d
+  harbor                      harbor-harbor-notary-server-86d88d7748-cwdkx    0 (0%)        0 (0%)      0 (0%)           0 (0%)         10d
+  harbor                      harbor-harbor-notary-signer-5dff69fc9f-9lnm7    0 (0%)        0 (0%)      0 (0%)           0 (0%)         10d
+  harbor                      harbor-harbor-portal-7d946bbf56-jgt8n           0 (0%)        0 (0%)      0 (0%)           0 (0%)         10d
+  harbor                      harbor-harbor-registry-6f5d655f89-mmfvr         0 (0%)        0 (0%)      0 (0%)           0 (0%)         10d
+  ingress-nginx               ingress-nginx-controller-krj4g                  250m (2%)     1 (11%)     1Gi (1%)         4Gi (6%)       2d14h
+  kube-system                 calico-node-nnwtw                               150m (1%)     300m (3%)   64M (0%)         500M (0%)      30d
+  kube-system                 kube-proxy-w4s62                                0 (0%)        0 (0%)      0 (0%)           0 (0%)         30d
+  kube-system                 nginx-proxy-foxtrot                           25m (0%)      0 (0%)      32M (0%)         0 (0%)         30d
+  kube-system                 nodelocaldns-vkbdj                              100m (1%)     0 (0%)      70Mi (0%)        170Mi (0%)     30d
+  kube-system                 nvidia-device-plugin-c7dqz                      0 (0%)        0 (0%)      0 (0%)           0 (0%)         13d
+  monitoring                  dcgm-dcgm-exporter-xf6jv                        0 (0%)        0 (0%)      0 (0%)           0 (0%)         42h
+  monitoring                  grafana-promtail-fxqjd                          100m (1%)     200m (2%)   64Mi (0%)        128Mi (0%)     42h
+  monitoring                  prometheus-prometheus-node-exporter-kl89j       100m (1%)     500m (5%)   64Mi (0%)        128Mi (0%)     42h
+  node-feature-discovery      gpu-feature-discovery-5h2lb                     0 (0%)        0 (0%)      0 (0%)           0 (0%)         29d
+  node-feature-discovery      nfd-worker-j2vqk                                0 (0%)        0 (0%)      0 (0%)           0 (0%)         30d
+Allocated resources:
+  (Total limits may be over 100 percent, i.e., overcommitted.)
+  Resource           Requests        Limits
+  --------           --------        ------
+  cpu                725m (8%)       2 (22%)
+  memory             1345078Ki (2%)  5241660672 (8%)
+  ephemeral-storage  0 (0%)          0 (0%)
+  hugepages-2Mi      0 (0%)          0 (0%)
+  nvidia.com/gpu     0               0
+Events:              <none>
+
+
+Name:               golf
+Roles:              <none>
+Labels:             beta.kubernetes.io/arch=amd64
+                    beta.kubernetes.io/os=linux
+                    feature.node.kubernetes.io/cpu-cpuid.ADX=true
+                    feature.node.kubernetes.io/cpu-cpuid.AESNI=true
+                    feature.node.kubernetes.io/cpu-cpuid.AVX=true
+                    feature.node.kubernetes.io/cpu-cpuid.AVX2=true
+                    feature.node.kubernetes.io/cpu-cpuid.FMA3=true
+                    feature.node.kubernetes.io/cpu-cpuid.HLE=true
+                    feature.node.kubernetes.io/cpu-cpuid.IBPB=true
+                    feature.node.kubernetes.io/cpu-cpuid.RTM=true
+                    feature.node.kubernetes.io/custom-rdma.available=true
+                    feature.node.kubernetes.io/kernel-config.NO_HZ=true
+                    feature.node.kubernetes.io/kernel-config.NO_HZ_IDLE=true
+                    feature.node.kubernetes.io/kernel-version.full=4.15.0-121-generic
+                    feature.node.kubernetes.io/kernel-version.major=4
+                    feature.node.kubernetes.io/kernel-version.minor=15
+                    feature.node.kubernetes.io/kernel-version.revision=0
+                    feature.node.kubernetes.io/pci-10de.present=true
+                    feature.node.kubernetes.io/system-os_release.ID=ubuntu
+                    feature.node.kubernetes.io/system-os_release.VERSION_ID=18.04
+                    feature.node.kubernetes.io/system-os_release.VERSION_ID.major=18
+                    feature.node.kubernetes.io/system-os_release.VERSION_ID.minor=04
+                    kubernetes.io/arch=amd64
+                    kubernetes.io/hostname=golf
+                    kubernetes.io/os=linux
+                    nvidia.com/cuda.driver.major=418
+                    nvidia.com/cuda.driver.minor=165
+                    nvidia.com/cuda.driver.rev=02
+                    nvidia.com/cuda.runtime.major=10
+                    nvidia.com/cuda.runtime.minor=1
+                    nvidia.com/gfd.timestamp=1613813974
+                    nvidia.com/gpu.compute.major=7
+                    nvidia.com/gpu.compute.minor=0
+                    nvidia.com/gpu.count=1
+                    nvidia.com/gpu.family=volta
+                    nvidia.com/gpu.memory=16130
+                    nvidia.com/gpu.product=Tesla-V100-SXM2-16GB
+                    nvidia.com/mig.strategy=mixed
+Annotations:        kubeadm.alpha.kubernetes.io/cri-socket: /var/run/dockershim.sock
+                    nfd.node.kubernetes.io/extended-resources: 
+                    nfd.node.kubernetes.io/feature-labels:
+                      cpu-cpuid.ADX,cpu-cpuid.AESNI,cpu-cpuid.AVX,cpu-cpuid.AVX2,cpu-cpuid.FMA3,cpu-cpuid.HLE,cpu-cpuid.IBPB,cpu-cpuid.RTM,custom-rdma.available...
+                    nfd.node.kubernetes.io/worker.version: v0.6.0
+                    node.alpha.kubernetes.io/ttl: 0
+                    volumes.kubernetes.io/controller-managed-attach-detach: true
+CreationTimestamp:  Wed, 20 Jan 2021 17:40:30 +0100
+Taints:             <none>
+Unschedulable:      false
+Lease:
+  HolderIdentity:  golf
+  AcquireTime:     <unset>
+  RenewTime:       Sat, 20 Feb 2021 10:40:08 +0100
+Conditions:
+  Type                 Status  LastHeartbeatTime                 LastTransitionTime                Reason                       Message
+  ----                 ------  -----------------                 ------------------                ------                       -------
+  NetworkUnavailable   False   Thu, 21 Jan 2021 16:04:22 +0100   Thu, 21 Jan 2021 16:04:22 +0100   CalicoIsUp                   Calico is running on this node
+  MemoryPressure       False   Sat, 20 Feb 2021 10:40:09 +0100   Thu, 21 Jan 2021 15:58:54 +0100   KubeletHasSufficientMemory   kubelet has sufficient memory available
+  DiskPressure         False   Sat, 20 Feb 2021 10:40:09 +0100   Thu, 21 Jan 2021 15:58:54 +0100   KubeletHasNoDiskPressure     kubelet has no disk pressure
+  PIDPressure          False   Sat, 20 Feb 2021 10:40:09 +0100   Thu, 21 Jan 2021 15:58:54 +0100   KubeletHasSufficientPID      kubelet has sufficient PID available
+  Ready                True    Sat, 20 Feb 2021 10:40:09 +0100   Thu, 21 Jan 2021 15:58:54 +0100   KubeletReady                 kubelet is posting ready status. AppArmor enabled
+Addresses:
+  InternalIP:  192.168.10.115
+  Hostname:    golf
+Capacity:
+  cpu:                9
+  ephemeral-storage:  206159720Ki
+  hugepages-2Mi:      0
+  memory:             60391Mi
+  nvidia.com/gpu:     1
+  pods:               110
+Allocatable:
+  cpu:                8900m
+  ephemeral-storage:  189996797638
+  hugepages-2Mi:      0
+  memory:             61487984Ki
+  nvidia.com/gpu:     1
+  pods:               110
+System Info:
+  Machine ID:                 8bf6604304754bc4bacc9b54ea8b12ae
+  System UUID:                2DAF1D05-A955-4ECE-B371-EC5022EBF7D5
+  Boot ID:                    3ed3d5d4-32a8-4b66-a6c4-f88da901768e
+  Kernel Version:             4.15.0-121-generic
+  OS Image:                   Ubuntu 18.04.5 LTS
+  Operating System:           linux
+  Architecture:               amd64
+  Container Runtime Version:  docker://19.3.12
+  Kubelet Version:            v1.18.9
+  Kube-Proxy Version:         v1.18.9
+PodCIDR:                      10.233.85.0/24
+PodCIDRs:                     10.233.85.0/24
+Non-terminated Pods:          (12 in total)
+  Namespace                   Name                                         CPU Requests  CPU Limits  Memory Requests  Memory Limits  AGE
+  ---------                   ----                                         ------------  ----------  ---------------  -------------  ---
+  ingress-nginx               ingress-nginx-controller-r6xcg               250m (2%)     1 (11%)     1Gi (1%)         4Gi (6%)       2d14h
+  kube-system                 calico-node-fjngg                            150m (1%)     300m (3%)   64M (0%)         500M (0%)      30d
+  kube-system                 kube-proxy-w2x5c                             0 (0%)        0 (0%)      0 (0%)           0 (0%)         30d
+  kube-system                 nginx-proxy-golf                        25m (0%)      0 (0%)      32M (0%)         0 (0%)         30d
+  kube-system                 nodelocaldns-zwbwh                           100m (1%)     0 (0%)      70Mi (0%)        170Mi (0%)     30d
+  kube-system                 nvidia-device-plugin-xl7g4                   0 (0%)        0 (0%)      0 (0%)           0 (0%)         13d
+  misiek                      g-grafana-image-renderer-7dbd4fcd6c-4nmjl    50m (0%)      100m (1%)   50Mi (0%)        100Mi (0%)     3d18h
+  monitoring                  dcgm-dcgm-exporter-6vjvg                     0 (0%)        0 (0%)      0 (0%)           0 (0%)         42h
+  monitoring                  grafana-promtail-27gzk                       100m (1%)     200m (2%)   64Mi (0%)        128Mi (0%)     42h
+  monitoring                  prometheus-prometheus-node-exporter-tjvt5    100m (1%)     500m (5%)   64Mi (0%)        128Mi (0%)     42h
+  node-feature-discovery      gpu-feature-discovery-29k4z                  0 (0%)        0 (0%)      0 (0%)           0 (0%)         30d
+  node-feature-discovery      nfd-worker-pb7rx                             0 (0%)        0 (0%)      0 (0%)           0 (0%)         30d
+Allocated resources:
+  (Total limits may be over 100 percent, i.e., overcommitted.)
+  Resource           Requests        Limits
+  --------           --------        ------
+  cpu                775m (8%)       2100m (23%)
+  memory             1396278Ki (2%)  5346518272 (8%)
+  ephemeral-storage  0 (0%)          0 (0%)
+  hugepages-2Mi      0 (0%)          0 (0%)
+  nvidia.com/gpu     0               0
+Events:              <none>
+
+
+Name:               hotel
+Roles:              <none>
+Labels:             beta.kubernetes.io/arch=amd64
+                    beta.kubernetes.io/os=linux
+                    feature.node.kubernetes.io/cpu-cpuid.ADX=true
+                    feature.node.kubernetes.io/cpu-cpuid.AESNI=true
+                    feature.node.kubernetes.io/cpu-cpuid.AVX=true
+                    feature.node.kubernetes.io/cpu-cpuid.AVX2=true
+                    feature.node.kubernetes.io/cpu-cpuid.FMA3=true
+                    feature.node.kubernetes.io/cpu-cpuid.HLE=true
+                    feature.node.kubernetes.io/cpu-cpuid.IBPB=true
+                    feature.node.kubernetes.io/cpu-cpuid.RTM=true
+                    feature.node.kubernetes.io/custom-rdma.available=true
+                    feature.node.kubernetes.io/kernel-config.NO_HZ=true
+                    feature.node.kubernetes.io/kernel-config.NO_HZ_IDLE=true
+                    feature.node.kubernetes.io/kernel-version.full=4.15.0-121-generic
+                    feature.node.kubernetes.io/kernel-version.major=4
+                    feature.node.kubernetes.io/kernel-version.minor=15
+                    feature.node.kubernetes.io/kernel-version.revision=0
+                    feature.node.kubernetes.io/pci-10de.present=true
+                    feature.node.kubernetes.io/system-os_release.ID=ubuntu
+                    feature.node.kubernetes.io/system-os_release.VERSION_ID=18.04
+                    feature.node.kubernetes.io/system-os_release.VERSION_ID.major=18
+                    feature.node.kubernetes.io/system-os_release.VERSION_ID.minor=04
+                    kubernetes.io/arch=amd64
+                    kubernetes.io/hostname=hotel
+                    kubernetes.io/os=linux
+                    nvidia.com/cuda.driver.major=418
+                    nvidia.com/cuda.driver.minor=165
+                    nvidia.com/cuda.driver.rev=02
+                    nvidia.com/cuda.runtime.major=10
+                    nvidia.com/cuda.runtime.minor=1
+                    nvidia.com/gfd.timestamp=1613813946
+                    nvidia.com/gpu.compute.major=7
+                    nvidia.com/gpu.compute.minor=0
+                    nvidia.com/gpu.count=1
+                    nvidia.com/gpu.family=volta
+                    nvidia.com/gpu.memory=16130
+                    nvidia.com/gpu.product=Tesla-V100-SXM2-16GB
+                    nvidia.com/mig.strategy=mixed
+Annotations:        kubeadm.alpha.kubernetes.io/cri-socket: /var/run/dockershim.sock
+                    nfd.node.kubernetes.io/extended-resources: 
+                    nfd.node.kubernetes.io/feature-labels:
+                      cpu-cpuid.ADX,cpu-cpuid.AESNI,cpu-cpuid.AVX,cpu-cpuid.AVX2,cpu-cpuid.FMA3,cpu-cpuid.HLE,cpu-cpuid.IBPB,cpu-cpuid.RTM,custom-rdma.available...
+                    nfd.node.kubernetes.io/worker.version: v0.6.0
+                    node.alpha.kubernetes.io/ttl: 0
+                    volumes.kubernetes.io/controller-managed-attach-detach: true
+CreationTimestamp:  Wed, 20 Jan 2021 17:40:30 +0100
+Taints:             <none>
+Unschedulable:      false
+Lease:
+  HolderIdentity:  hotel
+  AcquireTime:     <unset>
+  RenewTime:       Sat, 20 Feb 2021 10:40:08 +0100
+Conditions:
+  Type                 Status  LastHeartbeatTime                 LastTransitionTime                Reason                       Message
+  ----                 ------  -----------------                 ------------------                ------                       -------
+  NetworkUnavailable   False   Thu, 21 Jan 2021 16:04:22 +0100   Thu, 21 Jan 2021 16:04:22 +0100   CalicoIsUp                   Calico is running on this node
+  MemoryPressure       False   Sat, 20 Feb 2021 10:40:02 +0100   Thu, 04 Feb 2021 17:15:31 +0100   KubeletHasSufficientMemory   kubelet has sufficient memory available
+  DiskPressure         False   Sat, 20 Feb 2021 10:40:02 +0100   Thu, 04 Feb 2021 17:15:31 +0100   KubeletHasNoDiskPressure     kubelet has no disk pressure
+  PIDPressure          False   Sat, 20 Feb 2021 10:40:02 +0100   Thu, 04 Feb 2021 17:15:31 +0100   KubeletHasSufficientPID      kubelet has sufficient PID available
+  Ready                True    Sat, 20 Feb 2021 10:40:02 +0100   Thu, 04 Feb 2021 17:15:31 +0100   KubeletReady                 kubelet is posting ready status. AppArmor enabled
+Addresses:
+  InternalIP:  192.168.10.116
+  Hostname:    hotel
+Capacity:
+  cpu:                9
+  ephemeral-storage:  206159720Ki
+  hugepages-2Mi:      0
+  memory:             60391Mi
+  nvidia.com/gpu:     1
+  pods:               110
+Allocatable:
+  cpu:                8900m
+  ephemeral-storage:  189996797638
+  hugepages-2Mi:      0
+  memory:             61487984Ki
+  nvidia.com/gpu:     1
+  pods:               110
+System Info:
+  Machine ID:                 5cec0ad33bb8441bbdde84d386200ea5
+  System UUID:                6F1CC3DA-D6B5-4F8E-B16B-89A7A9A02073
+  Boot ID:                    4af7b7cb-cc7d-4cb4-8e64-b8e16d2346a4
+  Kernel Version:             4.15.0-121-generic
+  OS Image:                   Ubuntu 18.04.5 LTS
+  Operating System:           linux
+  Architecture:               amd64
+  Container Runtime Version:  docker://19.3.12
+  Kubelet Version:            v1.18.9
+  Kube-Proxy Version:         v1.18.9
+PodCIDR:                      10.233.86.0/24
+PodCIDRs:                     10.233.86.0/24
+Non-terminated Pods:          (12 in total)
+  Namespace                   Name                                         CPU Requests  CPU Limits   Memory Requests  Memory Limits  AGE
+  ---------                   ----                                         ------------  ----------   ---------------  -------------  ---
+  ingress-nginx               ingress-nginx-controller-59r8h               250m (2%)     1 (11%)      1Gi (1%)         4Gi (6%)       2d14h
+  kube-system                 calico-node-778kw                            150m (1%)     300m (3%)    64M (0%)         500M (0%)      30d
+  kube-system                 kube-proxy-b5lmg                             0 (0%)        0 (0%)       0 (0%)           0 (0%)         30d
+  kube-system                 nginx-proxy-hotel                        25m (0%)      0 (0%)       32M (0%)         0 (0%)         30d
+  kube-system                 nodelocaldns-h47k2                           100m (1%)     0 (0%)       70Mi (0%)        170Mi (0%)     30d
+  kube-system                 nvidia-device-plugin-99ngp                   0 (0%)        0 (0%)       0 (0%)           0 (0%)         13d
+  monitoring                  dcgm-dcgm-exporter-wdldj                     0 (0%)        0 (0%)       0 (0%)           0 (0%)         42h
+  monitoring                  grafana-promtail-bb8vz                       100m (1%)     200m (2%)    64Mi (0%)        128Mi (0%)     42h
+  monitoring                  prometheus-prometheus-node-exporter-952tj    100m (1%)     500m (5%)    64Mi (0%)        128Mi (0%)     42h
+  monitoring                  prometheus-prometheus-po-prometheus-0        600m (6%)     4100m (46%)  4146Mi (6%)      16434Mi (27%)  42h
+  node-feature-discovery      gpu-feature-discovery-v6jdv                  0 (0%)        0 (0%)       0 (0%)           0 (0%)         29d
+  node-feature-discovery      nfd-worker-ct5tc                             0 (0%)        0 (0%)       0 (0%)           0 (0%)         30d
+Allocated resources:
+  (Total limits may be over 100 percent, i.e., overcommitted.)
+  Resource           Requests        Limits
+  --------           --------        ------
+  cpu                1325m (14%)     6100m (68%)
+  memory             5590582Ki (9%)  22473958656 (35%)
+  ephemeral-storage  0 (0%)          0 (0%)
+  hugepages-2Mi      0 (0%)          0 (0%)
+  nvidia.com/gpu     0               0
+Events:              <none>
+
+
+Name:               master-0
+Roles:              master
+Labels:             beta.kubernetes.io/arch=amd64
+                    beta.kubernetes.io/os=linux
+                    feature.node.kubernetes.io/cpu-cpuid.ADX=true
+                    feature.node.kubernetes.io/cpu-cpuid.AESNI=true
+                    feature.node.kubernetes.io/cpu-cpuid.AVX=true
+                    feature.node.kubernetes.io/cpu-cpuid.AVX2=true
+                    feature.node.kubernetes.io/cpu-cpuid.FMA3=true
+                    feature.node.kubernetes.io/cpu-cpuid.HLE=true
+                    feature.node.kubernetes.io/cpu-cpuid.IBPB=true
+                    feature.node.kubernetes.io/cpu-cpuid.MPX=true
+                    feature.node.kubernetes.io/cpu-cpuid.RTM=true
+                    feature.node.kubernetes.io/cpu-cpuid.STIBP=true
+                    feature.node.kubernetes.io/cpu-cpuid.VMX=true
+                    feature.node.kubernetes.io/cpu-pstate.turbo=true
+                    feature.node.kubernetes.io/kernel-config.NO_HZ=true
+                    feature.node.kubernetes.io/kernel-config.NO_HZ_IDLE=true
+                    feature.node.kubernetes.io/kernel-version.full=4.15.0-123-generic
+                    feature.node.kubernetes.io/kernel-version.major=4
+                    feature.node.kubernetes.io/kernel-version.minor=15
+                    feature.node.kubernetes.io/kernel-version.revision=0
+                    feature.node.kubernetes.io/network-sriov.capable=true
+                    feature.node.kubernetes.io/pci-1a03.present=true
+                    feature.node.kubernetes.io/system-os_release.ID=ubuntu
+                    feature.node.kubernetes.io/system-os_release.VERSION_ID=18.04
+                    feature.node.kubernetes.io/system-os_release.VERSION_ID.major=18
+                    feature.node.kubernetes.io/system-os_release.VERSION_ID.minor=04
+                    kubernetes.io/arch=amd64
+                    kubernetes.io/hostname=master-0
+                    kubernetes.io/os=linux
+                    node-role.kubernetes.io/master=
+Annotations:        kubeadm.alpha.kubernetes.io/cri-socket: /var/run/dockershim.sock
+                    nfd.node.kubernetes.io/extended-resources: 
+                    nfd.node.kubernetes.io/feature-labels:
+                      cpu-cpuid.ADX,cpu-cpuid.AESNI,cpu-cpuid.AVX,cpu-cpuid.AVX2,cpu-cpuid.FMA3,cpu-cpuid.HLE,cpu-cpuid.IBPB,cpu-cpuid.MPX,cpu-cpuid.RTM,cpu-cpu...
+                    nfd.node.kubernetes.io/master.version: v0.6.0
+                    nfd.node.kubernetes.io/worker.version: v0.6.0
+                    node.alpha.kubernetes.io/ttl: 0
+                    volumes.kubernetes.io/controller-managed-attach-detach: true
+CreationTimestamp:  Mon, 11 Jan 2021 20:21:47 +0100
+Taints:             node-role.kubernetes.io/master:NoSchedule
+Unschedulable:      false
+Lease:
+  HolderIdentity:  master-0
+  AcquireTime:     <unset>
+  RenewTime:       Sat, 20 Feb 2021 10:40:01 +0100
+Conditions:
+  Type                 Status  LastHeartbeatTime                 LastTransitionTime                Reason                       Message
+  ----                 ------  -----------------                 ------------------                ------                       -------
+  NetworkUnavailable   False   Mon, 11 Jan 2021 20:25:30 +0100   Mon, 11 Jan 2021 20:25:30 +0100   CalicoIsUp                   Calico is running on this node
+  MemoryPressure       False   Sat, 20 Feb 2021 10:40:08 +0100   Mon, 11 Jan 2021 20:21:45 +0100   KubeletHasSufficientMemory   kubelet has sufficient memory available
+  DiskPressure         False   Sat, 20 Feb 2021 10:40:08 +0100   Mon, 11 Jan 2021 20:21:45 +0100   KubeletHasNoDiskPressure     kubelet has no disk pressure
+  PIDPressure          False   Sat, 20 Feb 2021 10:40:08 +0100   Mon, 11 Jan 2021 20:21:45 +0100   KubeletHasSufficientPID      kubelet has sufficient PID available
+  Ready                True    Sat, 20 Feb 2021 10:40:08 +0100   Mon, 11 Jan 2021 20:25:11 +0100   KubeletReady                 kubelet is posting ready status. AppArmor enabled
+Addresses:
+  InternalIP:  192.168.10.50
+  Hostname:    master-0
+Capacity:
+  cpu:                4
+  ephemeral-storage:  459403376Ki
+  hugepages-1Gi:      0
+  hugepages-2Mi:      0
+  memory:             32840416Ki
+  pods:               110
+Allocatable:
+  cpu:                3800m
+  ephemeral-storage:  423386150621
+  hugepages-1Gi:      0
+  hugepages-2Mi:      0
+  memory:             32238016Ki
+  pods:               110
+System Info:
+  Machine ID:                 d52a41ede4414a52b90e1b372025337a
+  System UUID:                9BFAC6A5-1F4B-49E1-8AB1-7CB598453D54
+  Boot ID:                    7de1696a-f3a0-4c73-b24f-9c68e474e745
+  Kernel Version:             4.15.0-123-generic
+  OS Image:                   Ubuntu 18.04.4 LTS
+  Operating System:           linux
+  Architecture:               amd64
+  Container Runtime Version:  docker://19.3.12
+  Kubelet Version:            v1.18.9
+  Kube-Proxy Version:         v1.18.9
+PodCIDR:                      10.233.64.0/24
+PodCIDRs:                     10.233.64.0/24
+Non-terminated Pods:          (10 in total)
+  Namespace                   Name                                         CPU Requests  CPU Limits  Memory Requests  Memory Limits  AGE
+  ---------                   ----                                         ------------  ----------  ---------------  -------------  ---
+  kube-system                 calico-node-9f5zk                            150m (3%)     300m (7%)   64M (0%)         500M (1%)      39d
+  kube-system                 coredns-dff8fc7d-d7gp8                       100m (2%)     0 (0%)      70Mi (0%)        170Mi (0%)     39d
+  kube-system                 kube-apiserver-master-0                      250m (6%)     0 (0%)      0 (0%)           0 (0%)         39d
+  kube-system                 kube-controller-manager-master-0             200m (5%)     0 (0%)      0 (0%)           0 (0%)         39d
+  kube-system                 kube-proxy-77mgx                             0 (0%)        0 (0%)      0 (0%)           0 (0%)         39d
+  kube-system                 kube-scheduler-master-0                      100m (2%)     0 (0%)      0 (0%)           0 (0%)         39d
+  kube-system                 nodelocaldns-b5w7z                           100m (2%)     0 (0%)      70Mi (0%)        170Mi (0%)     39d
+  monitoring                  grafana-promtail-ccxx6                       100m (2%)     200m (5%)   64Mi (0%)        128Mi (0%)     42h
+  monitoring                  prometheus-prometheus-node-exporter-nktcl    100m (2%)     500m (13%)  64Mi (0%)        128Mi (0%)     42h
+  node-feature-discovery      nfd-master-bc8c476d9-psznf                   0 (0%)        0 (0%)      0 (0%)           0 (0%)         39d
+Allocated resources:
+  (Total limits may be over 100 percent, i.e., overcommitted.)
+  Resource           Requests        Limits
+  --------           --------        ------
+  cpu                1100m (28%)     1 (26%)
+  memory             345018368 (1%)  1124951296 (3%)
+  ephemeral-storage  0 (0%)          0 (0%)
+  hugepages-1Gi      0 (0%)          0 (0%)
+  hugepages-2Mi      0 (0%)          0 (0%)
+Events:              <none>
+
+
+Name:               master-1
+Roles:              master
+Labels:             beta.kubernetes.io/arch=amd64
+                    beta.kubernetes.io/os=linux
+                    feature.node.kubernetes.io/cpu-cpuid.ADX=true
+                    feature.node.kubernetes.io/cpu-cpuid.AESNI=true
+                    feature.node.kubernetes.io/cpu-cpuid.AVX=true
+                    feature.node.kubernetes.io/cpu-cpuid.AVX2=true
+                    feature.node.kubernetes.io/cpu-cpuid.FMA3=true
+                    feature.node.kubernetes.io/cpu-cpuid.HLE=true
+                    feature.node.kubernetes.io/cpu-cpuid.IBPB=true
+                    feature.node.kubernetes.io/cpu-cpuid.MPX=true
+                    feature.node.kubernetes.io/cpu-cpuid.RTM=true
+                    feature.node.kubernetes.io/cpu-cpuid.STIBP=true
+                    feature.node.kubernetes.io/cpu-cpuid.VMX=true
+                    feature.node.kubernetes.io/cpu-pstate.turbo=true
+                    feature.node.kubernetes.io/kernel-config.NO_HZ=true
+                    feature.node.kubernetes.io/kernel-config.NO_HZ_IDLE=true
+                    feature.node.kubernetes.io/kernel-version.full=4.15.0-112-generic
+                    feature.node.kubernetes.io/kernel-version.major=4
+                    feature.node.kubernetes.io/kernel-version.minor=15
+                    feature.node.kubernetes.io/kernel-version.revision=0
+                    feature.node.kubernetes.io/network-sriov.capable=true
+                    feature.node.kubernetes.io/pci-1a03.present=true
+                    feature.node.kubernetes.io/system-os_release.ID=ubuntu
+                    feature.node.kubernetes.io/system-os_release.VERSION_ID=18.04
+                    feature.node.kubernetes.io/system-os_release.VERSION_ID.major=18
+                    feature.node.kubernetes.io/system-os_release.VERSION_ID.minor=04
+                    kubernetes.io/arch=amd64
+                    kubernetes.io/hostname=master-1
+                    kubernetes.io/os=linux
+                    node-role.kubernetes.io/master=
+Annotations:        kubeadm.alpha.kubernetes.io/cri-socket: /var/run/dockershim.sock
+                    nfd.node.kubernetes.io/extended-resources: 
+                    nfd.node.kubernetes.io/feature-labels:
+                      cpu-cpuid.ADX,cpu-cpuid.AESNI,cpu-cpuid.AVX,cpu-cpuid.AVX2,cpu-cpuid.FMA3,cpu-cpuid.HLE,cpu-cpuid.IBPB,cpu-cpuid.MPX,cpu-cpuid.RTM,cpu-cpu...
+                    nfd.node.kubernetes.io/master.version: v0.6.0
+                    nfd.node.kubernetes.io/worker.version: v0.6.0
+                    node.alpha.kubernetes.io/ttl: 0
+                    volumes.kubernetes.io/controller-managed-attach-detach: true
+CreationTimestamp:  Mon, 11 Jan 2021 20:22:40 +0100
+Taints:             node-role.kubernetes.io/master:NoSchedule
+Unschedulable:      false
+Lease:
+  HolderIdentity:  master-1
+  AcquireTime:     <unset>
+  RenewTime:       Sat, 20 Feb 2021 10:40:09 +0100
+Conditions:
+  Type                 Status  LastHeartbeatTime                 LastTransitionTime                Reason                       Message
+  ----                 ------  -----------------                 ------------------                ------                       -------
+  NetworkUnavailable   False   Mon, 11 Jan 2021 20:25:31 +0100   Mon, 11 Jan 2021 20:25:31 +0100   CalicoIsUp                   Calico is running on this node
+  MemoryPressure       False   Sat, 20 Feb 2021 10:40:06 +0100   Mon, 11 Jan 2021 20:22:38 +0100   KubeletHasSufficientMemory   kubelet has sufficient memory available
+  DiskPressure         False   Sat, 20 Feb 2021 10:40:06 +0100   Mon, 11 Jan 2021 20:22:38 +0100   KubeletHasNoDiskPressure     kubelet has no disk pressure
+  PIDPressure          False   Sat, 20 Feb 2021 10:40:06 +0100   Mon, 11 Jan 2021 20:22:38 +0100   KubeletHasSufficientPID      kubelet has sufficient PID available
+  Ready                True    Sat, 20 Feb 2021 10:40:06 +0100   Mon, 11 Jan 2021 20:25:11 +0100   KubeletReady                 kubelet is posting ready status. AppArmor enabled
+Addresses:
+  InternalIP:  192.168.10.51
+  Hostname:    master-1
+Capacity:
+  cpu:                4
+  ephemeral-storage:  459403376Ki
+  hugepages-1Gi:      0
+  hugepages-2Mi:      0
+  memory:             32840420Ki
+  pods:               110
+Allocatable:
+  cpu:                3800m
+  ephemeral-storage:  423386150621
+  hugepages-1Gi:      0
+  hugepages-2Mi:      0
+  memory:             32238020Ki
+  pods:               110
+System Info:
+  Machine ID:                 2a32955a37b340c49d730e447b11dc64
+  System UUID:                B0489DDC-A907-451B-A6A7-43719DA14F1E
+  Boot ID:                    8518715f-7add-4fbe-9203-92a2e9795e8f
+  Kernel Version:             4.15.0-112-generic
+  OS Image:                   Ubuntu 18.04.4 LTS
+  Operating System:           linux
+  Architecture:               amd64
+  Container Runtime Version:  docker://19.3.12
+  Kubelet Version:            v1.18.9
+  Kube-Proxy Version:         v1.18.9
+PodCIDR:                      10.233.65.0/24
+PodCIDRs:                     10.233.65.0/24
+Non-terminated Pods:          (11 in total)
+  Namespace                   Name                                         CPU Requests  CPU Limits  Memory Requests  Memory Limits  AGE
+  ---------                   ----                                         ------------  ----------  ---------------  -------------  ---
+  kube-system                 calico-kube-controllers-7555669494-v8pdl     30m (0%)      100m (2%)   64M (0%)         256M (0%)      38d
+  kube-system                 calico-node-f5lbv                            150m (3%)     300m (7%)   64M (0%)         500M (1%)      39d
+  kube-system                 dns-autoscaler-66498f5c5f-wkzck              20m (0%)      0 (0%)      10Mi (0%)        0 (0%)         39d
+  kube-system                 kube-apiserver-master-1                      250m (6%)     0 (0%)      0 (0%)           0 (0%)         39d
+  kube-system                 kube-controller-manager-master-1             200m (5%)     0 (0%)      0 (0%)           0 (0%)         39d
+  kube-system                 kube-proxy-vtrkj                             0 (0%)        0 (0%)      0 (0%)           0 (0%)         39d
+  kube-system                 kube-scheduler-master-1                      100m (2%)     0 (0%)      0 (0%)           0 (0%)         39d
+  kube-system                 kubernetes-dashboard-c8c99b87c-smh5l         50m (1%)      100m (2%)   64M (0%)         256M (0%)      38d
+  kube-system                 nodelocaldns-8kpd8                           100m (2%)     0 (0%)      70Mi (0%)        170Mi (0%)     39d
+  monitoring                  grafana-promtail-rlr4w                       100m (2%)     200m (5%)   64Mi (0%)        128Mi (0%)     42h
+  monitoring                  prometheus-prometheus-node-exporter-5v65s    100m (2%)     500m (13%)  64Mi (0%)        128Mi (0%)     42h
+Allocated resources:
+  (Total limits may be over 100 percent, i.e., overcommitted.)
+  Resource           Requests        Limits
+  --------           --------        ------
+  cpu                1100m (28%)     1200m (31%)
+  memory             410103808 (1%)  1458693376 (4%)
+  ephemeral-storage  0 (0%)          0 (0%)
+  hugepages-1Gi      0 (0%)          0 (0%)
+  hugepages-2Mi      0 (0%)          0 (0%)
+Events:              <none>
+
+
+Name:               master-2
+Roles:              master
+Labels:             beta.kubernetes.io/arch=amd64
+                    beta.kubernetes.io/os=linux
+                    feature.node.kubernetes.io/cpu-cpuid.ADX=true
+                    feature.node.kubernetes.io/cpu-cpuid.AESNI=true
+                    feature.node.kubernetes.io/cpu-cpuid.AVX=true
+                    feature.node.kubernetes.io/cpu-cpuid.AVX2=true
+                    feature.node.kubernetes.io/cpu-cpuid.FMA3=true
+                    feature.node.kubernetes.io/cpu-cpuid.HLE=true
+                    feature.node.kubernetes.io/cpu-cpuid.IBPB=true
+                    feature.node.kubernetes.io/cpu-cpuid.MPX=true
+                    feature.node.kubernetes.io/cpu-cpuid.RTM=true
+                    feature.node.kubernetes.io/cpu-cpuid.STIBP=true
+                    feature.node.kubernetes.io/cpu-cpuid.VMX=true
+                    feature.node.kubernetes.io/cpu-pstate.turbo=true
+                    feature.node.kubernetes.io/kernel-config.NO_HZ=true
+                    feature.node.kubernetes.io/kernel-config.NO_HZ_IDLE=true
+                    feature.node.kubernetes.io/kernel-version.full=4.15.0-112-generic
+                    feature.node.kubernetes.io/kernel-version.major=4
+                    feature.node.kubernetes.io/kernel-version.minor=15
+                    feature.node.kubernetes.io/kernel-version.revision=0
+                    feature.node.kubernetes.io/network-sriov.capable=true
+                    feature.node.kubernetes.io/pci-1a03.present=true
+                    feature.node.kubernetes.io/system-os_release.ID=ubuntu
+                    feature.node.kubernetes.io/system-os_release.VERSION_ID=18.04
+                    feature.node.kubernetes.io/system-os_release.VERSION_ID.major=18
+                    feature.node.kubernetes.io/system-os_release.VERSION_ID.minor=04
+                    kubernetes.io/arch=amd64
+                    kubernetes.io/hostname=master-2
+                    kubernetes.io/os=linux
+                    node-role.kubernetes.io/master=
+Annotations:        kubeadm.alpha.kubernetes.io/cri-socket: /var/run/dockershim.sock
+                    nfd.node.kubernetes.io/extended-resources: 
+                    nfd.node.kubernetes.io/feature-labels:
+                      cpu-cpuid.ADX,cpu-cpuid.AESNI,cpu-cpuid.AVX,cpu-cpuid.AVX2,cpu-cpuid.FMA3,cpu-cpuid.HLE,cpu-cpuid.IBPB,cpu-cpuid.MPX,cpu-cpuid.RTM,cpu-cpu...
+                    nfd.node.kubernetes.io/worker.version: v0.6.0
+                    node.alpha.kubernetes.io/ttl: 0
+                    volumes.kubernetes.io/controller-managed-attach-detach: true
+CreationTimestamp:  Mon, 11 Jan 2021 20:22:41 +0100
+Taints:             node-role.kubernetes.io/master:NoSchedule
+Unschedulable:      false
+Lease:
+  HolderIdentity:  master-2
+  AcquireTime:     <unset>
+  RenewTime:       Sat, 20 Feb 2021 10:40:05 +0100
+Conditions:
+  Type                 Status  LastHeartbeatTime                 LastTransitionTime                Reason                       Message
+  ----                 ------  -----------------                 ------------------                ------                       -------
+  NetworkUnavailable   False   Mon, 11 Jan 2021 20:25:31 +0100   Mon, 11 Jan 2021 20:25:31 +0100   CalicoIsUp                   Calico is running on this node
+  MemoryPressure       False   Sat, 20 Feb 2021 10:40:08 +0100   Mon, 11 Jan 2021 20:22:39 +0100   KubeletHasSufficientMemory   kubelet has sufficient memory available
+  DiskPressure         False   Sat, 20 Feb 2021 10:40:08 +0100   Mon, 11 Jan 2021 20:22:39 +0100   KubeletHasNoDiskPressure     kubelet has no disk pressure
+  PIDPressure          False   Sat, 20 Feb 2021 10:40:08 +0100   Mon, 11 Jan 2021 20:22:39 +0100   KubeletHasSufficientPID      kubelet has sufficient PID available
+  Ready                True    Sat, 20 Feb 2021 10:40:08 +0100   Mon, 11 Jan 2021 20:25:11 +0100   KubeletReady                 kubelet is posting ready status. AppArmor enabled
+Addresses:
+  InternalIP:  192.168.10.52
+  Hostname:    master-2
+Capacity:
+  cpu:                4
+  ephemeral-storage:  459403376Ki
+  hugepages-1Gi:      0
+  hugepages-2Mi:      0
+  memory:             32840420Ki
+  pods:               110
+Allocatable:
+  cpu:                3800m
+  ephemeral-storage:  423386150621
+  hugepages-1Gi:      0
+  hugepages-2Mi:      0
+  memory:             32238020Ki
+  pods:               110
+System Info:
+  Machine ID:                 1879bd15a4d14d0782e2bfd46d189935
+  System UUID:                9B8CBE03-9DC0-4166-959A-F63646B103CA
+  Boot ID:                    a340eb27-b662-4f5a-ba37-6a0f62e7c3a6
+  Kernel Version:             4.15.0-112-generic
+  OS Image:                   Ubuntu 18.04.4 LTS
+  Operating System:           linux
+  Architecture:               amd64
+  Container Runtime Version:  docker://19.3.12
+  Kubelet Version:            v1.18.9
+  Kube-Proxy Version:         v1.18.9
+PodCIDR:                      10.233.66.0/24
+PodCIDRs:                     10.233.66.0/24
+Non-terminated Pods:          (9 in total)
+  Namespace                   Name                                         CPU Requests  CPU Limits  Memory Requests  Memory Limits  AGE
+  ---------                   ----                                         ------------  ----------  ---------------  -------------  ---
+  kube-system                 calico-node-q5s99                            150m (3%)     300m (7%)   64M (0%)         500M (1%)      39d
+  kube-system                 coredns-dff8fc7d-26mp4                       100m (2%)     0 (0%)      70Mi (0%)        170Mi (0%)     39d
+  kube-system                 kube-apiserver-master-2                      250m (6%)     0 (0%)      0 (0%)           0 (0%)         39d
+  kube-system                 kube-controller-manager-master-2             200m (5%)     0 (0%)      0 (0%)           0 (0%)         39d
+  kube-system                 kube-proxy-6s6zt                             0 (0%)        0 (0%)      0 (0%)           0 (0%)         39d
+  kube-system                 kube-scheduler-master-2                      100m (2%)     0 (0%)      0 (0%)           0 (0%)         39d
+  kube-system                 nodelocaldns-cnnn8                           100m (2%)     0 (0%)      70Mi (0%)        170Mi (0%)     39d
+  monitoring                  grafana-promtail-rxlvh                       100m (2%)     200m (5%)   64Mi (0%)        128Mi (0%)     42h
+  monitoring                  prometheus-prometheus-node-exporter-qg4c7    100m (2%)     500m (13%)  64Mi (0%)        128Mi (0%)     42h
+Allocated resources:
+  (Total limits may be over 100 percent, i.e., overcommitted.)
+  Resource           Requests        Limits
+  --------           --------        ------
+  cpu                1100m (28%)     1 (26%)
+  memory             345018368 (1%)  1124951296 (3%)
+  ephemeral-storage  0 (0%)          0 (0%)
+  hugepages-1Gi      0 (0%)          0 (0%)
+  hugepages-2Mi      0 (0%)          0 (0%)
+Events:              <none>
+
+
+Name:               india
+Roles:              <none>
+Labels:             beta.kubernetes.io/arch=amd64
+                    beta.kubernetes.io/os=linux
+                    feature.node.kubernetes.io/cpu-cpuid.ADX=true
+                    feature.node.kubernetes.io/cpu-cpuid.AESNI=true
+                    feature.node.kubernetes.io/cpu-cpuid.AVX=true
+                    feature.node.kubernetes.io/cpu-cpuid.AVX2=true
+                    feature.node.kubernetes.io/cpu-cpuid.FMA3=true
+                    feature.node.kubernetes.io/cpu-cpuid.SHA=true
+                    feature.node.kubernetes.io/cpu-cpuid.SSE4A=true
+                    feature.node.kubernetes.io/kernel-config.NO_HZ=true
+                    feature.node.kubernetes.io/kernel-config.NO_HZ_IDLE=true
+                    feature.node.kubernetes.io/kernel-version.full=4.15.0-118-generic
+                    feature.node.kubernetes.io/kernel-version.major=4
+                    feature.node.kubernetes.io/kernel-version.minor=15
+                    feature.node.kubernetes.io/kernel-version.revision=0
+                    feature.node.kubernetes.io/system-os_release.ID=ubuntu
+                    feature.node.kubernetes.io/system-os_release.VERSION_ID=18.04
+                    feature.node.kubernetes.io/system-os_release.VERSION_ID.major=18
+                    feature.node.kubernetes.io/system-os_release.VERSION_ID.minor=04
+                    kubernetes.io/arch=amd64
+                    kubernetes.io/hostname=india
+                    kubernetes.io/os=linux
+Annotations:        kubeadm.alpha.kubernetes.io/cri-socket: /var/run/dockershim.sock
+                    nfd.node.kubernetes.io/extended-resources: 
+                    nfd.node.kubernetes.io/feature-labels:
+                      cpu-cpuid.ADX,cpu-cpuid.AESNI,cpu-cpuid.AVX,cpu-cpuid.AVX2,cpu-cpuid.FMA3,cpu-cpuid.SHA,cpu-cpuid.SSE4A,kernel-config.NO_HZ,kernel-config....
+                    nfd.node.kubernetes.io/worker.version: v0.6.0
+                    node.alpha.kubernetes.io/ttl: 0
+                    volumes.kubernetes.io/controller-managed-attach-detach: true
+CreationTimestamp:  Wed, 20 Jan 2021 18:29:50 +0100
+Taints:             <none>
+Unschedulable:      false
+Lease:
+  HolderIdentity:  india
+  AcquireTime:     <unset>
+  RenewTime:       Sat, 20 Feb 2021 10:40:05 +0100
+Conditions:
+  Type                 Status  LastHeartbeatTime                 LastTransitionTime                Reason                       Message
+  ----                 ------  -----------------                 ------------------                ------                       -------
+  NetworkUnavailable   False   Thu, 21 Jan 2021 16:03:06 +0100   Thu, 21 Jan 2021 16:03:06 +0100   CalicoIsUp                   Calico is running on this node
+  MemoryPressure       False   Sat, 20 Feb 2021 10:40:09 +0100   Thu, 21 Jan 2021 15:59:01 +0100   KubeletHasSufficientMemory   kubelet has sufficient memory available
+  DiskPressure         False   Sat, 20 Feb 2021 10:40:09 +0100   Thu, 21 Jan 2021 15:59:01 +0100   KubeletHasNoDiskPressure     kubelet has no disk pressure
+  PIDPressure          False   Sat, 20 Feb 2021 10:40:09 +0100   Thu, 21 Jan 2021 15:59:01 +0100   KubeletHasSufficientPID      kubelet has sufficient PID available
+  Ready                True    Sat, 20 Feb 2021 10:40:09 +0100   Thu, 21 Jan 2021 16:03:11 +0100   KubeletReady                 kubelet is posting ready status. AppArmor enabled
+Addresses:
+  InternalIP:  192.168.10.105
+  Hostname:    india
+Capacity:
+  cpu:                31
+  ephemeral-storage:  206290792Ki
+  hugepages-1Gi:      0
+  hugepages-2Mi:      0
+  memory:             31903088Ki
+  pods:               110
+Allocatable:
+  cpu:                30900m
+  ephemeral-storage:  190117593593
+  hugepages-1Gi:      0
+  hugepages-2Mi:      0
+  memory:             31550688Ki
+  pods:               110
+System Info:
+  Machine ID:                 55f7c41619e7472f9811c77e8c2225be
+  System UUID:                71D586EA-C5AB-4BBE-9CD5-A466FD4CEC78
+  Boot ID:                    590ef6cc-0507-4a7d-8cdd-d4cd9fd25287
+  Kernel Version:             4.15.0-118-generic
+  OS Image:                   Ubuntu 18.04.5 LTS
+  Operating System:           linux
+  Architecture:               amd64
+  Container Runtime Version:  docker://19.3.12
+  Kubelet Version:            v1.18.9
+  Kube-Proxy Version:         v1.18.9
+PodCIDR:                      10.233.87.0/24
+PodCIDRs:                     10.233.87.0/24
+Non-terminated Pods:          (11 in total)
+  Namespace                   Name                                         CPU Requests  CPU Limits  Memory Requests  Memory Limits  AGE
+  ---------                   ----                                         ------------  ----------  ---------------  -------------  ---
+  ingress-nginx               ingress-nginx-controller-9xclc               250m (0%)     1 (3%)      1Gi (3%)         4Gi (13%)      2d14h
+  kube-system                 calico-node-h5j7x                            150m (0%)     300m (0%)   64M (0%)         500M (1%)      30d
+  kube-system                 kube-proxy-f9pc8                             0 (0%)        0 (0%)      0 (0%)           0 (0%)         30d
+  kube-system                 nginx-proxy-india                          25m (0%)      0 (0%)      32M (0%)         0 (0%)         30d
+  kube-system                 nodelocaldns-df4l4                           100m (0%)     0 (0%)      70Mi (0%)        170Mi (0%)     30d
+  kube-system                 nvidia-device-plugin-xx564                   0 (0%)        0 (0%)      0 (0%)           0 (0%)         13d
+  monitoring                  alertmanager-prometheus-po-alertmanager-1    110m (0%)     200m (0%)   114Mi (0%)       178Mi (0%)     42h
+  monitoring                  grafana-promtail-g9kt7                       100m (0%)     200m (0%)   64Mi (0%)        128Mi (0%)     42h
+  monitoring                  prometheus-prometheus-node-exporter-dcl92    100m (0%)     500m (1%)   64Mi (0%)        128Mi (0%)     42h
+  node-feature-discovery      nfd-worker-lczfs                             0 (0%)        0 (0%)      0 (0%)           0 (0%)         30d
+Allocated resources:
+  (Total limits may be over 100 percent, i.e., overcommitted.)
+  Resource           Requests        Limits
+  --------           --------        ------
+  cpu                1835m (5%)      3200m (10%)
+  memory             2510390Ki (7%)  6502049024 (20%)
+  ephemeral-storage  0 (0%)          0 (0%)
+  hugepages-1Gi      0 (0%)          0 (0%)
+  hugepages-2Mi      0 (0%)          0 (0%)
+Events:              <none>
+
+
+Name:               juliet
+Roles:              <none>
+Labels:             beta.kubernetes.io/arch=amd64
+                    beta.kubernetes.io/os=linux
+                    feature.node.kubernetes.io/cpu-cpuid.ADX=true
+                    feature.node.kubernetes.io/cpu-cpuid.AESNI=true
+                    feature.node.kubernetes.io/cpu-cpuid.AVX=true
+                    feature.node.kubernetes.io/cpu-cpuid.AVX2=true
+                    feature.node.kubernetes.io/cpu-cpuid.FMA3=true
+                    feature.node.kubernetes.io/cpu-cpuid.SHA=true
+                    feature.node.kubernetes.io/cpu-cpuid.SSE4A=true
+                    feature.node.kubernetes.io/kernel-config.NO_HZ=true
+                    feature.node.kubernetes.io/kernel-config.NO_HZ_IDLE=true
+                    feature.node.kubernetes.io/kernel-version.full=4.15.0-118-generic
+                    feature.node.kubernetes.io/kernel-version.major=4
+                    feature.node.kubernetes.io/kernel-version.minor=15
+                    feature.node.kubernetes.io/kernel-version.revision=0
+                    feature.node.kubernetes.io/system-os_release.ID=ubuntu
+                    feature.node.kubernetes.io/system-os_release.VERSION_ID=18.04
+                    feature.node.kubernetes.io/system-os_release.VERSION_ID.major=18
+                    feature.node.kubernetes.io/system-os_release.VERSION_ID.minor=04
+                    kubernetes.io/arch=amd64
+                    kubernetes.io/hostname=juliet
+                    kubernetes.io/os=linux
+Annotations:        kubeadm.alpha.kubernetes.io/cri-socket: /var/run/dockershim.sock
+                    nfd.node.kubernetes.io/extended-resources: 
+                    nfd.node.kubernetes.io/feature-labels:
+                      cpu-cpuid.ADX,cpu-cpuid.AESNI,cpu-cpuid.AVX,cpu-cpuid.AVX2,cpu-cpuid.FMA3,cpu-cpuid.SHA,cpu-cpuid.SSE4A,kernel-config.NO_HZ,kernel-config....
+                    nfd.node.kubernetes.io/worker.version: v0.6.0
+                    node.alpha.kubernetes.io/ttl: 0
+                    volumes.kubernetes.io/controller-managed-attach-detach: true
+CreationTimestamp:  Wed, 20 Jan 2021 18:29:50 +0100
+Taints:             <none>
+Unschedulable:      false
+Lease:
+  HolderIdentity:  juliet
+  AcquireTime:     <unset>
+  RenewTime:       Sat, 20 Feb 2021 10:40:09 +0100
+Conditions:
+  Type                 Status  LastHeartbeatTime                 LastTransitionTime                Reason                       Message
+  ----                 ------  -----------------                 ------------------                ------                       -------
+  NetworkUnavailable   False   Thu, 21 Jan 2021 16:03:15 +0100   Thu, 21 Jan 2021 16:03:15 +0100   CalicoIsUp                   Calico is running on this node
+  MemoryPressure       False   Sat, 20 Feb 2021 10:40:03 +0100   Thu, 21 Jan 2021 15:59:49 +0100   KubeletHasSufficientMemory   kubelet has sufficient memory available
+  DiskPressure         False   Sat, 20 Feb 2021 10:40:03 +0100   Thu, 21 Jan 2021 15:59:49 +0100   KubeletHasNoDiskPressure     kubelet has no disk pressure
+  PIDPressure          False   Sat, 20 Feb 2021 10:40:03 +0100   Thu, 21 Jan 2021 15:59:49 +0100   KubeletHasSufficientPID      kubelet has sufficient PID available
+  Ready                True    Sat, 20 Feb 2021 10:40:03 +0100   Thu, 21 Jan 2021 16:03:13 +0100   KubeletReady                 kubelet is posting ready status. AppArmor enabled
+Addresses:
+  InternalIP:  192.168.10.106
+  Hostname:    juliet
+Capacity:
+  cpu:                31
+  ephemeral-storage:  206290792Ki
+  hugepages-1Gi:      0
+  hugepages-2Mi:      0
+  memory:             31903088Ki
+  pods:               110
+Allocatable:
+  cpu:                30900m
+  ephemeral-storage:  190117593593
+  hugepages-1Gi:      0
+  hugepages-2Mi:      0
+  memory:             31550688Ki
+  pods:               110
+System Info:
+  Machine ID:                 20a5b94fc59e434b88d0b06f4cab3fe2
+  System UUID:                7321B638-D950-4B01-9EDB-415DA7D78FC5
+  Boot ID:                    c253ddb1-ab4b-4c36-92b0-8a362e31ce17
+  Kernel Version:             4.15.0-118-generic
+  OS Image:                   Ubuntu 18.04.5 LTS
+  Operating System:           linux
+  Architecture:               amd64
+  Container Runtime Version:  docker://19.3.12
+  Kubelet Version:            v1.18.9
+  Kube-Proxy Version:         v1.18.9
+PodCIDR:                      10.233.89.0/24
+PodCIDRs:                     10.233.89.0/24
+Non-terminated Pods:          (16 in total)
+  Namespace                   Name                                              CPU Requests  CPU Limits  Memory Requests  Memory Limits  AGE
+  ---------                   ----                                              ------------  ----------  ---------------  -------------  ---
+  ingress-nginx               ingress-nginx-controller-sqrck                    250m (0%)     1 (3%)      1Gi (3%)         4Gi (13%)      2d14h
+  kube-system                 calico-node-phs94                                 150m (0%)     300m (0%)   64M (0%)         500M (1%)      30d
+  kube-system                 kube-proxy-bcmgf                                  0 (0%)        0 (0%)      0 (0%)           0 (0%)         30d
+  kube-system                 nginx-proxy-juliet                               25m (0%)      0 (0%)      32M (0%)         0 (0%)         30d
+  kube-system                 nodelocaldns-bg998                                100m (0%)     0 (0%)      70Mi (0%)        170Mi (0%)     30d
+  kube-system                 nvidia-device-plugin-tdg7l                        0 (0%)        0 (0%)      0 (0%)           0 (0%)         13d
+  monitoring                  alertmanager-prometheus-po-alertmanager-0         110m (0%)     200m (0%)   114Mi (0%)       178Mi (0%)     42h
+  monitoring                  grafana-84949c4c78-zjjzl                          100m (0%)     500m (1%)   128Mi (0%)       256Mi (0%)     42h
+  monitoring                  grafana-image-renderer-86955cdc67-45x8p           500m (1%)     1 (3%)      256Mi (0%)       1Gi (3%)       42h
+  monitoring                  grafana-loki-0                                    200m (0%)     500m (1%)   256Mi (0%)       512Mi (1%)     42h
+  monitoring                  grafana-promtail-pd7xh                            100m (0%)     200m (0%)   64Mi (0%)        128Mi (0%)     42h
+  monitoring                  prometheus-kube-state-metrics-6bdcf7bb4f-9qmfn    50m (0%)      100m (0%)   128Mi (0%)       128Mi (0%)     42h
+  monitoring                  prometheus-po-operator-754498bf54-8k7sh           250m (0%)     250m (0%)   128Mi (0%)       256Mi (0%)     42h
+  monitoring                  prometheus-prometheus-node-exporter-9d7z4         100m (0%)     500m (1%)   64Mi (0%)        128Mi (0%)     42h
+  nfs                         nfs-client-provisioner-7cc5545486-d64s2           0 (0%)        0 (0%)      0 (0%)           0 (0%)         29d
+  node-feature-discovery      nfd-worker-l56rm                                  0 (0%)        0 (0%)      0 (0%)           0 (0%)         30d
+Allocated resources:
+  (Total limits may be over 100 percent, i.e., overcommitted.)
+  Resource           Requests        Limits
+  --------           --------        ------
+  cpu                1935m (6%)      4550m (14%)
+  memory             2379318Ki (7%)  7710008576 (23%)
+  ephemeral-storage  0 (0%)          0 (0%)
+  hugepages-1Gi      0 (0%)          0 (0%)
+  hugepages-2Mi      0 (0%)          0 (0%)
+Events:              <none>
+
+
+Name:               kilo
+Roles:              <none>
+Labels:             beta.kubernetes.io/arch=amd64
+                    beta.kubernetes.io/os=linux
+                    feature.node.kubernetes.io/cpu-cpuid.ADX=true
+                    feature.node.kubernetes.io/cpu-cpuid.AESNI=true
+                    feature.node.kubernetes.io/cpu-cpuid.AVX=true
+                    feature.node.kubernetes.io/cpu-cpuid.AVX2=true
+                    feature.node.kubernetes.io/cpu-cpuid.FMA3=true
+                    feature.node.kubernetes.io/cpu-cpuid.SHA=true
+                    feature.node.kubernetes.io/cpu-cpuid.SSE4A=true
+                    feature.node.kubernetes.io/kernel-config.NO_HZ=true
+                    feature.node.kubernetes.io/kernel-config.NO_HZ_IDLE=true
+                    feature.node.kubernetes.io/kernel-version.full=4.15.0-118-generic
+                    feature.node.kubernetes.io/kernel-version.major=4
+                    feature.node.kubernetes.io/kernel-version.minor=15
+                    feature.node.kubernetes.io/kernel-version.revision=0
+                    feature.node.kubernetes.io/system-os_release.ID=ubuntu
+                    feature.node.kubernetes.io/system-os_release.VERSION_ID=18.04
+                    feature.node.kubernetes.io/system-os_release.VERSION_ID.major=18
+                    feature.node.kubernetes.io/system-os_release.VERSION_ID.minor=04
+                    kubernetes.io/arch=amd64
+                    kubernetes.io/hostname=kilo
+                    kubernetes.io/os=linux
+Annotations:        kubeadm.alpha.kubernetes.io/cri-socket: /var/run/dockershim.sock
+                    nfd.node.kubernetes.io/extended-resources: 
+                    nfd.node.kubernetes.io/feature-labels:
+                      cpu-cpuid.ADX,cpu-cpuid.AESNI,cpu-cpuid.AVX,cpu-cpuid.AVX2,cpu-cpuid.FMA3,cpu-cpuid.SHA,cpu-cpuid.SSE4A,kernel-config.NO_HZ,kernel-config....
+                    nfd.node.kubernetes.io/worker.version: v0.6.0
+                    node.alpha.kubernetes.io/ttl: 0
+                    volumes.kubernetes.io/controller-managed-attach-detach: true
+CreationTimestamp:  Wed, 20 Jan 2021 18:29:50 +0100
+Taints:             <none>
+Unschedulable:      false
+Lease:
+  HolderIdentity:  kilo
+  AcquireTime:     <unset>
+  RenewTime:       Sat, 20 Feb 2021 10:40:06 +0100
+Conditions:
+  Type                 Status  LastHeartbeatTime                 LastTransitionTime                Reason                       Message
+  ----                 ------  -----------------                 ------------------                ------                       -------
+  NetworkUnavailable   False   Thu, 21 Jan 2021 16:03:09 +0100   Thu, 21 Jan 2021 16:03:09 +0100   CalicoIsUp                   Calico is running on this node
+  MemoryPressure       False   Sat, 20 Feb 2021 10:40:05 +0100   Wed, 20 Jan 2021 18:29:50 +0100   KubeletHasSufficientMemory   kubelet has sufficient memory available
+  DiskPressure         False   Sat, 20 Feb 2021 10:40:05 +0100   Wed, 20 Jan 2021 18:29:50 +0100   KubeletHasNoDiskPressure     kubelet has no disk pressure
+  PIDPressure          False   Sat, 20 Feb 2021 10:40:05 +0100   Wed, 20 Jan 2021 18:29:50 +0100   KubeletHasSufficientPID      kubelet has sufficient PID available
+  Ready                True    Sat, 20 Feb 2021 10:40:05 +0100   Thu, 21 Jan 2021 16:03:13 +0100   KubeletReady                 kubelet is posting ready status. AppArmor enabled
+Addresses:
+  InternalIP:  192.168.10.107
+  Hostname:    kilo
+Capacity:
+  cpu:                31
+  ephemeral-storage:  206290792Ki
+  hugepages-1Gi:      0
+  hugepages-2Mi:      0
+  memory:             31903088Ki
+  pods:               110
+Allocatable:
+  cpu:                30900m
+  ephemeral-storage:  190117593593
+  hugepages-1Gi:      0
+  hugepages-2Mi:      0
+  memory:             31550688Ki
+  pods:               110
+System Info:
+  Machine ID:                 88757692461f41238dbfe09e0e921323
+  System UUID:                5773E468-DC20-4BD9-860E-EA858913875B
+  Boot ID:                    5b2b28d6-ba25-4d78-bc72-3e9b53af738c
+  Kernel Version:             4.15.0-118-generic
+  OS Image:                   Ubuntu 18.04.5 LTS
+  Operating System:           linux
+  Architecture:               amd64
+  Container Runtime Version:  docker://19.3.12
+  Kubelet Version:            v1.18.9
+  Kube-Proxy Version:         v1.18.9
+PodCIDR:                      10.233.90.0/24
+PodCIDRs:                     10.233.90.0/24
+Non-terminated Pods:          (11 in total)
+  Namespace                   Name                                         CPU Requests  CPU Limits  Memory Requests  Memory Limits  AGE
+  ---------                   ----                                         ------------  ----------  ---------------  -------------  ---
+  harbor                      harbor-harbor-redis-0                        0 (0%)        0 (0%)      0 (0%)           0 (0%)         10d
+  ingress-nginx               ingress-nginx-controller-wb4mc               250m (0%)     1 (3%)      1Gi (3%)         4Gi (13%)      2d14h
+  kube-system                 calico-node-2j2zw                            150m (0%)     300m (0%)   64M (0%)         500M (1%)      30d
+  kube-system                 kube-proxy-5d27n                             0 (0%)        0 (0%)      0 (0%)           0 (0%)         30d
+  kube-system                 nginx-proxy-kilo                          25m (0%)      0 (0%)      32M (0%)         0 (0%)         30d
+  kube-system                 nodelocaldns-kmhch                           100m (0%)     0 (0%)      70Mi (0%)        170Mi (0%)     30d
+  kube-system                 nvidia-device-plugin-bgwxz                   0 (0%)        0 (0%)      0 (0%)           0 (0%)         13d
+  monitoring                  alertmanager-prometheus-po-alertmanager-2    110m (0%)     200m (0%)   114Mi (0%)       178Mi (0%)     42h
+  monitoring                  grafana-promtail-786p2                       100m (0%)     200m (0%)   64Mi (0%)        128Mi (0%)     42h
+  monitoring                  prometheus-prometheus-node-exporter-zxb2k    100m (0%)     500m (1%)   64Mi (0%)        128Mi (0%)     42h
+  node-feature-discovery      nfd-worker-9nzmq                             0 (0%)        0 (0%)      0 (0%)           0 (0%)         30d
+Allocated resources:
+  (Total limits may be over 100 percent, i.e., overcommitted.)
+  Resource           Requests        Limits
+  --------           --------        ------
+  cpu                835m (2%)       2200m (7%)
+  memory             1461814Ki (4%)  5428307200 (16%)
+  ephemeral-storage  0 (0%)          0 (0%)
+  hugepages-1Gi      0 (0%)          0 (0%)
+  hugepages-2Mi      0 (0%)          0 (0%)
+Events:              <none>
+
+
+Name:               lima
+Roles:              <none>
+Labels:             beta.kubernetes.io/arch=amd64
+                    beta.kubernetes.io/os=linux
+                    feature.node.kubernetes.io/cpu-cpuid.ADX=true
+                    feature.node.kubernetes.io/cpu-cpuid.AESNI=true
+                    feature.node.kubernetes.io/cpu-cpuid.AVX=true
+                    feature.node.kubernetes.io/cpu-cpuid.AVX2=true
+                    feature.node.kubernetes.io/cpu-cpuid.FMA3=true
+                    feature.node.kubernetes.io/cpu-cpuid.SHA=true
+                    feature.node.kubernetes.io/cpu-cpuid.SSE4A=true
+                    feature.node.kubernetes.io/kernel-config.NO_HZ=true
+                    feature.node.kubernetes.io/kernel-config.NO_HZ_IDLE=true
+                    feature.node.kubernetes.io/kernel-version.full=4.15.0-118-generic
+                    feature.node.kubernetes.io/kernel-version.major=4
+                    feature.node.kubernetes.io/kernel-version.minor=15
+                    feature.node.kubernetes.io/kernel-version.revision=0
+                    feature.node.kubernetes.io/system-os_release.ID=ubuntu
+                    feature.node.kubernetes.io/system-os_release.VERSION_ID=18.04
+                    feature.node.kubernetes.io/system-os_release.VERSION_ID.major=18
+                    feature.node.kubernetes.io/system-os_release.VERSION_ID.minor=04
+                    kubernetes.io/arch=amd64
+                    kubernetes.io/hostname=lima
+                    kubernetes.io/os=linux
+Annotations:        kubeadm.alpha.kubernetes.io/cri-socket: /var/run/dockershim.sock
+                    nfd.node.kubernetes.io/extended-resources: 
+                    nfd.node.kubernetes.io/feature-labels:
+                      cpu-cpuid.ADX,cpu-cpuid.AESNI,cpu-cpuid.AVX,cpu-cpuid.AVX2,cpu-cpuid.FMA3,cpu-cpuid.SHA,cpu-cpuid.SSE4A,kernel-config.NO_HZ,kernel-config....
+                    nfd.node.kubernetes.io/worker.version: v0.6.0
+                    node.alpha.kubernetes.io/ttl: 0
+                    volumes.kubernetes.io/controller-managed-attach-detach: true
+CreationTimestamp:  Wed, 20 Jan 2021 18:29:50 +0100
+Taints:             <none>
+Unschedulable:      false
+Lease:
+  HolderIdentity:  lima
+  AcquireTime:     <unset>
+  RenewTime:       Sat, 20 Feb 2021 10:40:11 +0100
+Conditions:
+  Type                 Status  LastHeartbeatTime                 LastTransitionTime                Reason                       Message
+  ----                 ------  -----------------                 ------------------                ------                       -------
+  NetworkUnavailable   False   Thu, 21 Jan 2021 16:03:26 +0100   Thu, 21 Jan 2021 16:03:26 +0100   CalicoIsUp                   Calico is running on this node
+  MemoryPressure       False   Sat, 20 Feb 2021 10:40:09 +0100   Wed, 20 Jan 2021 18:29:50 +0100   KubeletHasSufficientMemory   kubelet has sufficient memory available
+  DiskPressure         False   Sat, 20 Feb 2021 10:40:09 +0100   Wed, 20 Jan 2021 18:29:50 +0100   KubeletHasNoDiskPressure     kubelet has no disk pressure
+  PIDPressure          False   Sat, 20 Feb 2021 10:40:09 +0100   Wed, 20 Jan 2021 18:29:50 +0100   KubeletHasSufficientPID      kubelet has sufficient PID available
+  Ready                True    Sat, 20 Feb 2021 10:40:09 +0100   Thu, 21 Jan 2021 16:03:15 +0100   KubeletReady                 kubelet is posting ready status. AppArmor enabled
+Addresses:
+  InternalIP:  192.168.10.108
+  Hostname:    lima
+Capacity:
+  cpu:                31
+  ephemeral-storage:  206290792Ki
+  hugepages-1Gi:      0
+  hugepages-2Mi:      0
+  memory:             31903088Ki
+  pods:               110
+Allocatable:
+  cpu:                30900m
+  ephemeral-storage:  190117593593
+  hugepages-1Gi:      0
+  hugepages-2Mi:      0
+  memory:             31550688Ki
+  pods:               110
+System Info:
+  Machine ID:                 d920f372509848978bba709c45b477a7
+  System UUID:                04CA998E-0C22-46D0-B731-0741FF99F8AF
+  Boot ID:                    0bee060b-b3c1-4289-9d9b-52a6ba9427cf
+  Kernel Version:             4.15.0-118-generic
+  OS Image:                   Ubuntu 18.04.5 LTS
+  Operating System:           linux
+  Architecture:               amd64
+  Container Runtime Version:  docker://19.3.12
+  Kubelet Version:            v1.18.9
+  Kube-Proxy Version:         v1.18.9
+PodCIDR:                      10.233.88.0/24
+PodCIDRs:                     10.233.88.0/24
+Non-terminated Pods:          (12 in total)
+  Namespace                   Name                                         CPU Requests  CPU Limits  Memory Requests  Memory Limits  AGE
+  ---------                   ----                                         ------------  ----------  ---------------  -------------  ---
+  ingress-nginx               ingress-nginx-controller-4gkhx               250m (0%)     1 (3%)      1Gi (3%)         4Gi (13%)      2d14h
+  kube-system                 calico-node-tjxf2                            150m (0%)     300m (0%)   64M (0%)         500M (1%)      30d
+  kube-system                 kube-proxy-kjlrs                             0 (0%)        0 (0%)      0 (0%)           0 (0%)         30d
+  kube-system                 nginx-proxy-lima                          25m (0%)      0 (0%)      32M (0%)         0 (0%)         30d
+  kube-system                 nodelocaldns-mh9lh                           100m (0%)     0 (0%)      70Mi (0%)        170Mi (0%)     30d
+  kube-system                 nvidia-device-plugin-cmmpn                   0 (0%)        0 (0%)      0 (0%)           0 (0%)         13d
+  misiek                      g-grafana-5ccb5d9558-wxmrb                   100m (0%)     100m (0%)   128Mi (0%)       128Mi (0%)     3d14h
+  misiek                      misiek                                       0 (0%)        0 (0%)      0 (0%)           0 (0%)         14h
+  monitoring                  grafana-promtail-cphd2                       100m (0%)     200m (0%)   64Mi (0%)        128Mi (0%)     42h
+  monitoring                  prometheus-prometheus-node-exporter-9v9h7    100m (0%)     500m (1%)   64Mi (0%)        128Mi (0%)     42h
+  nfs                         nfs-client-provisioner-7cc5545486-lpbjp      0 (0%)        0 (0%)      0 (0%)           0 (0%)         29d
+  node-feature-discovery      nfd-worker-njxns                             0 (0%)        0 (0%)      0 (0%)           0 (0%)         30d
+Allocated resources:
+  (Total limits may be over 100 percent, i.e., overcommitted.)
+  Resource           Requests        Limits
+  --------           --------        ------
+  cpu                825m (2%)       2100m (6%)
+  memory             1476150Ki (4%)  5375878400 (16%)
+  ephemeral-storage  0 (0%)          0 (0%)
+  hugepages-1Gi      0 (0%)          0 (0%)
+  hugepages-2Mi      0 (0%)          0 (0%)
+Events:              <none>

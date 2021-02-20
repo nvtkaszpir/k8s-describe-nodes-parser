@@ -2,186 +2,103 @@
 
 Some simple dumb python script to parse `kubectl describe nodes`,
 tailored to parse nvidia gpu-feature-discovery output.
+Returns output as JSON, for easier parsing.
 
 tl;dr:
-I had to do some simpele detection if env will fit in k8s cluster with
+I had to do some simple detection if env will fit in k8s cluster with
 nvidia gpus, so this is a small helper script.
 
-Returns output as JSON, for easier parising.
-
-The superpowers of bash comes when you mix it whith `jq`:
+The superpowers of bash comes when you mix it with `jq`:
 
 ```bash
-python3 k8s_resources.py | jq '[.[]|.gpu.requests]|add'
+$ python3 k8s_resources.py --input data/nodes-fake.txt | jq '[.[]|.gpu.requests]|add'
+0
 ```
+
+## Example
+
+See [data/](data/) directory for input and output.
 
 ```bash
-python k8s_resources.py 
+python3 k8s_resources.py --input data/nodes-fake.txt  > data/output.json
 ```
 
-Example output:
+Example output (snippet):
+
 ```text
 [
   {
     "name": "alpha",
-    "mem": {
-      "requests": "6063670Ki",
-      "requests_percent": 9,
-      "limits": "10610369792",
-      "limits_percent": 16
-    },
     "cpu": {
-      "requests": "1225m",
-      "requests_percent": 13,
-      "limits": "5",
-      "limits_percent": 56
+      "requests": "925m",
+      "requests_percent": 10,
+      "limits": "3",
+      "limits_percent": 33
+    },
+    "mem": {
+      "requests": "1869366Ki",
+      "requests_percent": 3,
+      "limits": "6315402496",
+      "limits_percent": 10
     },
     "gpu": {
       "requests": 0,
       "limits": 0
-    }
+    },
+    "ephemeral-storage": {
+      "requests": "0",
+      "requests_percent": 0,
+      "limits": "0",
+      "limits_percent": 0
+    },
+    "hugepages-2Mi": {
+      "requests": "0",
+      "requests_percent": 0,
+      "limits": "0",
+      "limits_percent": 0
+    },
+    "hugepages-1Gi": null
   },
   {
     "name": "bravo",
-    "mem": {
-      "requests": "6522422Ki",
-      "requests_percent": 10,
-      "limits": "10543260928",
-      "limits_percent": 16
-    },
-    "cpu": {
-      "requests": "1075m",
-      "requests_percent": 12,
-      "limits": "4500m",
-      "limits_percent": 50
-    },
-    "gpu": {
-      "requests": 0,
-      "limits": 0
-    }
-  },
-  {
-    "name": "charlie",
-    "mem": {
-      "requests": "3634742Ki",
-      "requests_percent": 5,
-      "limits": "7586276608",
-      "limits_percent": 12
-    },
-    "cpu": {
-      "requests": "1075m",
-      "requests_percent": 12,
-      "limits": "3200m",
-      "limits_percent": 35
-    },
-    "gpu": {
-      "requests": 0,
-      "limits": 0
-    }
-  },
-  {
-    "name": "delta",
-    "mem": {
-      "requests": "11499062Ki",
-      "requests_percent": 18,
-      "limits": "15639340288",
-      "limits_percent": 24
-    },
-    "cpu": {
-      "requests": "1253m",
-      "requests_percent": 14,
-      "limits": "6500m",
-      "limits_percent": 73
-    },
-    "gpu": {
-      "requests": 0,
-      "limits": 0
-    }
-  },
-  {
-    "name": "echo",
-    "mem": {
-      "requests": "6870582Ki",
-      "requests_percent": 11,
-      "limits": "10899776768",
-      "limits_percent": 17
-    },
-    "cpu": {
-      "requests": "1975m",
-      "requests_percent": 22,
-      "limits": "4750m",
-      "limits_percent": 53
-    },
-    "gpu": {
-      "requests": 0,
-      "limits": 0
-    }
-  },
-  {
-    "name": "foxtrot",
-    "mem": {
-      "requests": "1345078Ki",
-      "requests_percent": 2,
-      "limits": "5241660672",
-      "limits_percent": 8
-    },
     "cpu": {
       "requests": "725m",
       "requests_percent": 8,
       "limits": "2",
       "limits_percent": 22
     },
-    "gpu": {
-      "requests": 0,
-      "limits": 0
-    }
-  },
-  {
-    "name": "golf",
     "mem": {
-      "requests": "6114870Ki",
-      "requests_percent": 9,
-      "limits": "10178356480",
-      "limits_percent": 16
-    },
-    "cpu": {
-      "requests": "1875m",
-      "requests_percent": 21,
-      "limits": "4700m",
-      "limits_percent": 52
+      "requests": "1345078Ki",
+      "requests_percent": 2,
+      "limits": "5241660672",
+      "limits_percent": 8
     },
     "gpu": {
       "requests": 0,
       "limits": 0
-    }
-  },
-  {
-    "name": "hotel",
-    "mem": {
-      "requests": "5590582Ki",
-      "requests_percent": 9,
-      "limits": "22473958656",
-      "limits_percent": 35
     },
-    "cpu": {
-      "requests": "1325m",
-      "requests_percent": 14,
-      "limits": "6100m",
-      "limits_percent": 68
+    "ephemeral-storage": {
+      "requests": "0",
+      "requests_percent": 0,
+      "limits": "0",
+      "limits_percent": 0
     },
-    "gpu": {
-      "requests": 0,
-      "limits": 0
-    }
+    "hugepages-2Mi": {
+      "requests": "0",
+      "requests_percent": 0,
+      "limits": "0",
+      "limits_percent": 0
+    },
+    "hugepages-1Gi": null
   }
 ]
+```
 
-
-# References
+## References
 
 * [jq](https://stedolan.github.io/jq/)
 * [python3](https://pythonclock.org/)
 
-# Contributing
+## Contributing
 
-Yoeah you can try, but be prepare that they will be rejected.
+Yeah you can try, but be prepare that they will be rejected.

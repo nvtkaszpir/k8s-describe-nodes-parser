@@ -1,19 +1,17 @@
-"""
-Parse 'kubectl describe nodes', convert to json that you may not like.
+"""Parse 'kubectl describe nodes', convert to json.
+
+see --help
+
 tl;dr we need to get some easy output of nodes and number of used gpus
 and then we do some super hardore science with it like
 "if number of gpu used is over 4 then fail creating k8s 'env with gpu'"
 
-hyper bash science below:
-
-    python3 k8s_resources.py | jq '[.[]|.gpu.requests]|add'
-
 """
 
-import io
+import argparse
 import json
+import sys
 import re
-import subprocess
 
 
 def parse_percent(input_str):
@@ -71,6 +69,32 @@ def get_nvidia(line):
     return gpu
 
 
+def get_ephemeral(line):
+    """get ephemeral storage
+    """
+    line = line.split()
+    eph = {
+        'requests': line[1],
+        'requests_percent': parse_percent(line[2]),
+        'limits': line[3],
+        'limits_percent': parse_percent(line[4]),
+    }
+    return eph
+
+
+def get_hugepages(line):
+    """get hugepages
+    """
+    line = line.split()
+    eph = {
+        'requests': line[1],
+        'requests_percent': parse_percent(line[2]),
+        'limits': line[3],
+        'limits_percent': parse_percent(line[4]),
+    }
+    return eph
+
+
 def get_allocated(lines):
     """get resource allocation on the node
     """
@@ -78,35 +102,40 @@ def get_allocated(lines):
     cpu = None
     mem = None
     gpu = None
+    eph = None
+    huge_2Mi = None
+    huge_1Gi = None
 
     # lines is a interator over an output, we seek for specific
     # output section, usually anything below 'Events' can be dropped
     while not line.startswith("Events"):
 
-        if line.strip().startswith('cpu'):
+        # todo, do some more nice processing to allow dynamic creation of data
+        line = line.strip()
+        if line.startswith('cpu'):
             cpu = get_cpu(line)
-        elif line.strip().startswith('memory'):
+        elif line.startswith('memory'):
             mem = get_memory(line)
-        elif line.strip().startswith('nvidia'):
+        elif line.startswith('nvidia.com/gpu'):
             gpu = get_nvidia(line)
+        elif line.startswith('ephemeral-storage'):
+            eph = get_ephemeral(line)
+        elif line.startswith('hugepages-2Mi'):
+            huge_2Mi = get_hugepages(line)
+        elif line.startswith('hugepages-1Gi'):
+            huge_1Gi = get_hugepages(line)
 
         line = lines.__next__()
 
-    return {'cpu': cpu, 'mem': mem, 'gpu': gpu}
-
-
-def kubectl_describe_nodes():
-    """run kubectl process and grab its output
-
-    process only instances with nvidia gpu labels
-    """
-    command = 'kubectl describe nodes -l nvidia.com/gpu.count'
-    process = subprocess.Popen(
-        command.split(),
-        stdout=subprocess.PIPE,
-        stderr=subprocess.STDOUT)
-
-    return io.TextIOWrapper(process.stdout, encoding="utf-8")
+    result = {
+        'cpu': cpu,
+        'mem': mem,
+        'gpu': gpu,
+        'ephemeral-storage': eph,
+        'hugepages-2Mi': huge_2Mi,
+        'hugepages-1Gi': huge_1Gi
+    }
+    return result
 
 
 def parse(lines):
@@ -115,16 +144,15 @@ def parse(lines):
     nodes = []
     if lines.__sizeof__() > 0:
         for line in lines:
+            # extract node name
             if line.startswith("Name"):
                 node = {}
                 node['name'] = get_name(line)
-
+            # extract allocated resources
             elif line.startswith('Allocated resources'):
-                # todo: make it less dumb copy-paste in the future (aka never)
                 data = get_allocated(lines)
-                node['mem'] = data['mem']
-                node['cpu'] = data['cpu']
-                node['gpu'] = data['gpu']
+                for k, v in data.items():
+                    node[k] = v
                 nodes.append(node)
     return nodes
 
@@ -135,13 +163,47 @@ def pretty(data):
     return json.dumps(data, indent=2)
 
 
-def get():
-    """get output from kubectl, parse and output into some nightmare format
+def run():
     """
-    output = kubectl_describe_nodes()
-    nodes = parse(output)
-    return nodes
+    Parses arguments and runs the script
+    """
+    epilog = """
+    Example usage:
+
+    Use stdin and stdout:
+        kubectl describe nodes | python3 k8s_resources.py | jq '[.[]|.gpu.requests]|add'
+
+    Use specific files for input and output:
+        kubectl describe nodes > output.txt
+        python3 k8s_resources.py -i output.txt
+
+    """
+    parser = argparse.ArgumentParser(
+        epilog=epilog,
+        formatter_class=argparse.RawDescriptionHelpFormatter
+    )
+    parser.add_argument(
+        "-i", "--input",
+        help='input, can be from stdin or file, this should be output of kubectl describe nodes',
+        type=argparse.FileType('r'),
+        default=sys.stdin,
+    )
+    parser.add_argument(
+        "-o",
+        "--output",
+        help='Where to pass parsed output, default stdout',
+        type=argparse.FileType('w'),
+        default=sys.stdout,
+    )
+    args = parser.parse_args()
+
+    data = args.input
+    output = args.output
+
+    data_list = parse(data)
+    pretty_json = pretty(data_list)
+    output.write(pretty_json)
 
 
 if __name__ == '__main__':
-    print(pretty(get()))
+    run()

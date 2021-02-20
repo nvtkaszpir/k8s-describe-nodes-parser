@@ -1,0 +1,496 @@
+[
+  {
+    "name": "alpha",
+    "cpu": {
+      "requests": "925m",
+      "requests_percent": 10,
+      "limits": "3",
+      "limits_percent": 33
+    },
+    "mem": {
+      "requests": "1869366Ki",
+      "requests_percent": 3,
+      "limits": "6315402496",
+      "limits_percent": 10
+    },
+    "gpu": {
+      "requests": 0,
+      "limits": 0
+    },
+    "ephemeral-storage": {
+      "requests": "0",
+      "requests_percent": 0,
+      "limits": "0",
+      "limits_percent": 0
+    },
+    "hugepages-2Mi": {
+      "requests": "0",
+      "requests_percent": 0,
+      "limits": "0",
+      "limits_percent": 0
+    },
+    "hugepages-1Gi": null
+  },
+  {
+    "name": "bravo",
+    "cpu": {
+      "requests": "725m",
+      "requests_percent": 8,
+      "limits": "2",
+      "limits_percent": 22
+    },
+    "mem": {
+      "requests": "1345078Ki",
+      "requests_percent": 2,
+      "limits": "5241660672",
+      "limits_percent": 8
+    },
+    "gpu": {
+      "requests": 0,
+      "limits": 0
+    },
+    "ephemeral-storage": {
+      "requests": "0",
+      "requests_percent": 0,
+      "limits": "0",
+      "limits_percent": 0
+    },
+    "hugepages-2Mi": {
+      "requests": "0",
+      "requests_percent": 0,
+      "limits": "0",
+      "limits_percent": 0
+    },
+    "hugepages-1Gi": null
+  },
+  {
+    "name": "charlie",
+    "cpu": {
+      "requests": "725m",
+      "requests_percent": 8,
+      "limits": "2",
+      "limits_percent": 22
+    },
+    "mem": {
+      "requests": "1345078Ki",
+      "requests_percent": 2,
+      "limits": "5241660672",
+      "limits_percent": 8
+    },
+    "gpu": {
+      "requests": 0,
+      "limits": 0
+    },
+    "ephemeral-storage": {
+      "requests": "0",
+      "requests_percent": 0,
+      "limits": "0",
+      "limits_percent": 0
+    },
+    "hugepages-2Mi": {
+      "requests": "0",
+      "requests_percent": 0,
+      "limits": "0",
+      "limits_percent": 0
+    },
+    "hugepages-1Gi": null
+  },
+  {
+    "name": "delta",
+    "cpu": {
+      "requests": "725m",
+      "requests_percent": 8,
+      "limits": "2",
+      "limits_percent": 22
+    },
+    "mem": {
+      "requests": "1345078Ki",
+      "requests_percent": 2,
+      "limits": "5241660672",
+      "limits_percent": 8
+    },
+    "gpu": {
+      "requests": 0,
+      "limits": 0
+    },
+    "ephemeral-storage": {
+      "requests": "0",
+      "requests_percent": 0,
+      "limits": "0",
+      "limits_percent": 0
+    },
+    "hugepages-2Mi": {
+      "requests": "0",
+      "requests_percent": 0,
+      "limits": "0",
+      "limits_percent": 0
+    },
+    "hugepages-1Gi": null
+  },
+  {
+    "name": "echo",
+    "cpu": {
+      "requests": "725m",
+      "requests_percent": 8,
+      "limits": "2",
+      "limits_percent": 22
+    },
+    "mem": {
+      "requests": "1345078Ki",
+      "requests_percent": 2,
+      "limits": "5241660672",
+      "limits_percent": 8
+    },
+    "gpu": {
+      "requests": 0,
+      "limits": 0
+    },
+    "ephemeral-storage": {
+      "requests": "0",
+      "requests_percent": 0,
+      "limits": "0",
+      "limits_percent": 0
+    },
+    "hugepages-2Mi": {
+      "requests": "0",
+      "requests_percent": 0,
+      "limits": "0",
+      "limits_percent": 0
+    },
+    "hugepages-1Gi": null
+  },
+  {
+    "name": "foxtrot",
+    "cpu": {
+      "requests": "725m",
+      "requests_percent": 8,
+      "limits": "2",
+      "limits_percent": 22
+    },
+    "mem": {
+      "requests": "1345078Ki",
+      "requests_percent": 2,
+      "limits": "5241660672",
+      "limits_percent": 8
+    },
+    "gpu": {
+      "requests": 0,
+      "limits": 0
+    },
+    "ephemeral-storage": {
+      "requests": "0",
+      "requests_percent": 0,
+      "limits": "0",
+      "limits_percent": 0
+    },
+    "hugepages-2Mi": {
+      "requests": "0",
+      "requests_percent": 0,
+      "limits": "0",
+      "limits_percent": 0
+    },
+    "hugepages-1Gi": null
+  },
+  {
+    "name": "golf",
+    "cpu": {
+      "requests": "775m",
+      "requests_percent": 8,
+      "limits": "2100m",
+      "limits_percent": 23
+    },
+    "mem": {
+      "requests": "1396278Ki",
+      "requests_percent": 2,
+      "limits": "5346518272",
+      "limits_percent": 8
+    },
+    "gpu": {
+      "requests": 0,
+      "limits": 0
+    },
+    "ephemeral-storage": {
+      "requests": "0",
+      "requests_percent": 0,
+      "limits": "0",
+      "limits_percent": 0
+    },
+    "hugepages-2Mi": {
+      "requests": "0",
+      "requests_percent": 0,
+      "limits": "0",
+      "limits_percent": 0
+    },
+    "hugepages-1Gi": null
+  },
+  {
+    "name": "hotel",
+    "cpu": {
+      "requests": "1325m",
+      "requests_percent": 14,
+      "limits": "6100m",
+      "limits_percent": 68
+    },
+    "mem": {
+      "requests": "5590582Ki",
+      "requests_percent": 9,
+      "limits": "22473958656",
+      "limits_percent": 35
+    },
+    "gpu": {
+      "requests": 0,
+      "limits": 0
+    },
+    "ephemeral-storage": {
+      "requests": "0",
+      "requests_percent": 0,
+      "limits": "0",
+      "limits_percent": 0
+    },
+    "hugepages-2Mi": {
+      "requests": "0",
+      "requests_percent": 0,
+      "limits": "0",
+      "limits_percent": 0
+    },
+    "hugepages-1Gi": null
+  },
+  {
+    "name": "master-0",
+    "cpu": {
+      "requests": "1100m",
+      "requests_percent": 28,
+      "limits": "1",
+      "limits_percent": 26
+    },
+    "mem": {
+      "requests": "345018368",
+      "requests_percent": 1,
+      "limits": "1124951296",
+      "limits_percent": 3
+    },
+    "gpu": null,
+    "ephemeral-storage": {
+      "requests": "0",
+      "requests_percent": 0,
+      "limits": "0",
+      "limits_percent": 0
+    },
+    "hugepages-2Mi": {
+      "requests": "0",
+      "requests_percent": 0,
+      "limits": "0",
+      "limits_percent": 0
+    },
+    "hugepages-1Gi": {
+      "requests": "0",
+      "requests_percent": 0,
+      "limits": "0",
+      "limits_percent": 0
+    }
+  },
+  {
+    "name": "master-1",
+    "cpu": {
+      "requests": "1100m",
+      "requests_percent": 28,
+      "limits": "1200m",
+      "limits_percent": 31
+    },
+    "mem": {
+      "requests": "410103808",
+      "requests_percent": 1,
+      "limits": "1458693376",
+      "limits_percent": 4
+    },
+    "gpu": null,
+    "ephemeral-storage": {
+      "requests": "0",
+      "requests_percent": 0,
+      "limits": "0",
+      "limits_percent": 0
+    },
+    "hugepages-2Mi": {
+      "requests": "0",
+      "requests_percent": 0,
+      "limits": "0",
+      "limits_percent": 0
+    },
+    "hugepages-1Gi": {
+      "requests": "0",
+      "requests_percent": 0,
+      "limits": "0",
+      "limits_percent": 0
+    }
+  },
+  {
+    "name": "master-2",
+    "cpu": {
+      "requests": "1100m",
+      "requests_percent": 28,
+      "limits": "1",
+      "limits_percent": 26
+    },
+    "mem": {
+      "requests": "345018368",
+      "requests_percent": 1,
+      "limits": "1124951296",
+      "limits_percent": 3
+    },
+    "gpu": null,
+    "ephemeral-storage": {
+      "requests": "0",
+      "requests_percent": 0,
+      "limits": "0",
+      "limits_percent": 0
+    },
+    "hugepages-2Mi": {
+      "requests": "0",
+      "requests_percent": 0,
+      "limits": "0",
+      "limits_percent": 0
+    },
+    "hugepages-1Gi": {
+      "requests": "0",
+      "requests_percent": 0,
+      "limits": "0",
+      "limits_percent": 0
+    }
+  },
+  {
+    "name": "india",
+    "cpu": {
+      "requests": "1835m",
+      "requests_percent": 5,
+      "limits": "3200m",
+      "limits_percent": 10
+    },
+    "mem": {
+      "requests": "2510390Ki",
+      "requests_percent": 7,
+      "limits": "6502049024",
+      "limits_percent": 20
+    },
+    "gpu": null,
+    "ephemeral-storage": {
+      "requests": "0",
+      "requests_percent": 0,
+      "limits": "0",
+      "limits_percent": 0
+    },
+    "hugepages-2Mi": {
+      "requests": "0",
+      "requests_percent": 0,
+      "limits": "0",
+      "limits_percent": 0
+    },
+    "hugepages-1Gi": {
+      "requests": "0",
+      "requests_percent": 0,
+      "limits": "0",
+      "limits_percent": 0
+    }
+  },
+  {
+    "name": "juliet",
+    "cpu": {
+      "requests": "1935m",
+      "requests_percent": 6,
+      "limits": "4550m",
+      "limits_percent": 14
+    },
+    "mem": {
+      "requests": "2379318Ki",
+      "requests_percent": 7,
+      "limits": "7710008576",
+      "limits_percent": 23
+    },
+    "gpu": null,
+    "ephemeral-storage": {
+      "requests": "0",
+      "requests_percent": 0,
+      "limits": "0",
+      "limits_percent": 0
+    },
+    "hugepages-2Mi": {
+      "requests": "0",
+      "requests_percent": 0,
+      "limits": "0",
+      "limits_percent": 0
+    },
+    "hugepages-1Gi": {
+      "requests": "0",
+      "requests_percent": 0,
+      "limits": "0",
+      "limits_percent": 0
+    }
+  },
+  {
+    "name": "kilo",
+    "cpu": {
+      "requests": "835m",
+      "requests_percent": 2,
+      "limits": "2200m",
+      "limits_percent": 7
+    },
+    "mem": {
+      "requests": "1461814Ki",
+      "requests_percent": 4,
+      "limits": "5428307200",
+      "limits_percent": 16
+    },
+    "gpu": null,
+    "ephemeral-storage": {
+      "requests": "0",
+      "requests_percent": 0,
+      "limits": "0",
+      "limits_percent": 0
+    },
+    "hugepages-2Mi": {
+      "requests": "0",
+      "requests_percent": 0,
+      "limits": "0",
+      "limits_percent": 0
+    },
+    "hugepages-1Gi": {
+      "requests": "0",
+      "requests_percent": 0,
+      "limits": "0",
+      "limits_percent": 0
+    }
+  },
+  {
+    "name": "lima",
+    "cpu": {
+      "requests": "825m",
+      "requests_percent": 2,
+      "limits": "2100m",
+      "limits_percent": 6
+    },
+    "mem": {
+      "requests": "1476150Ki",
+      "requests_percent": 4,
+      "limits": "5375878400",
+      "limits_percent": 16
+    },
+    "gpu": null,
+    "ephemeral-storage": {
+      "requests": "0",
+      "requests_percent": 0,
+      "limits": "0",
+      "limits_percent": 0
+    },
+    "hugepages-2Mi": {
+      "requests": "0",
+      "requests_percent": 0,
+      "limits": "0",
+      "limits_percent": 0
+    },
+    "hugepages-1Gi": {
+      "requests": "0",
+      "requests_percent": 0,
+      "limits": "0",
+      "limits_percent": 0
+    }
+  }
+]
