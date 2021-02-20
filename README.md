@@ -101,4 +101,4 @@ Example output (snippet):
 
 ## Contributing
 
-Yeah you can try, but be prepare that they will be rejected.
+Yeah you can try, but be prepared that they will be rejected.
